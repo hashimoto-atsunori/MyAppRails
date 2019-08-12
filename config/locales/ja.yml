@@ -1,4 +1,3 @@
----
 ja:
   activerecord:
     errors:
@@ -8,9 +7,9 @@ ja:
           has_one: "%{record}が存在しているので削除できません"
           has_many: "%{record}が存在しているので削除できません"
     models:
-      task: タスク
+      job: タスク
     attributes:
-      task:
+      job:
         id: ID
         name: 名称
         description: 詳しい説明

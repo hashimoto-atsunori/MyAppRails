@@ -1,0 +1,15 @@
+h1 Timer
+
+= link_to '詳細登録' , new_job_path, class:'btn btn-primary'
+
+.mb-3
+table.table.table-hover
+  thead.thead-default
+    tr
+      th= Job.human_attribute_name(:name)
+      th= Job.human_attribute_name(:created_at)
+  tbody
+    - @jobs.each do |job|
+      tr
+        td= link_to job.name, job
+        td= job.created_at
