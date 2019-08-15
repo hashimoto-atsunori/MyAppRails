@@ -7,10 +7,11 @@ html
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'hello_elm'
   body
     .app-title.navbar.navbar-expand-md.navbar-light.bg-light
       .navbar-brand Toggl
     .container
       - if flash.notice.present?
         .alert.alert-success= flash.notice
-      = yield
+      = yield 
