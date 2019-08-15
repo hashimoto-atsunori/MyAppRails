@@ -1501,3 +1501,564 @@ Processing by JobsController#index as HTML
 Completed 200 OK in 10758ms (Views: 10730.8ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/jobs" for 172.18.0.1 at 2019-08-15 14:43:23 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.slim:13
+  Rendered jobs/index.html.slim within layouts/application (10.6ms)
+[Webpacker] Compiling…
+Started GET "/" for 172.18.0.1 at 2019-08-15 14:43:26 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.slim:13
+  Rendered jobs/index.html.slim within layouts/application (10.4ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 8690ms (Views: 8672.4ms | ActiveRecord: 1.0ms)
+
+
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 8711ms (Views: 8684.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/jobs/2" for 172.18.0.1 at 2019-08-15 14:43:34 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mJob Load (1.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:7
+  Rendering jobs/show.html.slim within layouts/application
+  Rendered jobs/show.html.slim within layouts/application (9.0ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 9092ms (Views: 9062.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/jobs/2" for 172.18.0.1 at 2019-08-15 14:48:51 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:7
+  Rendering jobs/show.html.slim within layouts/application
+  Rendered jobs/show.html.slim within layouts/application (8.5ms)
+[Webpacker] Compiling…
+Started GET "/jobs" for 172.18.0.1 at 2019-08-15 14:48:54 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.slim:13
+  Rendered jobs/index.html.slim within layouts/application (12.5ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 8945ms (Views: 8920.7ms | ActiveRecord: 0.7ms)
+
+
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 8056ms (Views: 8030.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/jobs" for 172.18.0.1 at 2019-08-15 14:49:04 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.slim:13
+  Rendered jobs/index.html.slim within layouts/application (10.0ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 8467ms (Views: 8442.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/jobs" for 172.18.0.1 at 2019-08-15 14:50:18 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.slim:14
+  Rendered jobs/index.html.slim within layouts/application (12.9ms)
+[Webpacker] Compiling…
+Started GET "/jobs" for 172.18.0.1 at 2019-08-15 14:50:23 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.slim:14
+  Rendered jobs/index.html.slim within layouts/application (33.3ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 6878ms (Views: 6861.5ms | ActiveRecord: 0.6ms)
+
+
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 7742ms (Views: 7725.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/jobs" for 172.18.0.1 at 2019-08-15 14:56:37 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[36mJob Load (1.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.slim:14
+  Rendered jobs/index.html.slim within layouts/application (22.9ms)
+[Webpacker] Compiling…
+Started GET "/jobs/new" for 172.18.0.1 at 2019-08-15 14:56:44 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 8461ms (Views: 8428.1ms | ActiveRecord: 7.2ms)
+
+
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.slim within layouts/application
+  Rendered jobs/new.html.slim within layouts/application (5.8ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 7037ms (Views: 6966.8ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/jobs" for 172.18.0.1 at 2019-08-15 14:58:01 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.slim:15
+  Rendered jobs/index.html.slim within layouts/application (11.8ms)
+[Webpacker] Compiling…
+Started GET "/jobs" for 172.18.0.1 at 2019-08-15 14:58:06 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.slim:15
+  Rendered jobs/index.html.slim within layouts/application (11.3ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 9184ms (Views: 9165.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/jobs" for 172.18.0.1 at 2019-08-15 14:58:10 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.slim:15
+  Rendered jobs/index.html.slim within layouts/application (9.5ms)
+[Webpacker] Compiling…
+Started GET "/jobs/new" for 172.18.0.1 at 2019-08-15 14:58:12 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.slim within layouts/application
+  Rendered jobs/new.html.slim within layouts/application (6.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 10183ms (Views: 10160.2ms | ActiveRecord: 0.8ms)
+
+
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 10320ms (Views: 10298.9ms | ActiveRecord: 0.6ms)
+
+
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 10143ms (Views: 10108.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jobs/new" for 172.18.0.1 at 2019-08-15 14:58:23 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.slim within layouts/application
+  Rendered jobs/new.html.slim within layouts/application (5.2ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 9374ms (Views: 9344.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jobs" for 172.18.0.1 at 2019-08-15 14:58:39 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[36mJob Load (1.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.slim:15
+  Rendered jobs/index.html.slim within layouts/application (20.6ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 9481ms (Views: 9447.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/jobs/1/edit" for 172.18.0.1 at 2019-08-15 15:00:58 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:15
+  Rendering jobs/edit.html.slim within layouts/application
+  Rendered jobs/edit.html.slim within layouts/application (200.4ms)
+Completed 500 Internal Server Error in 291ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `job' for #<#<Class:0x00007f70c8a98090>:0x00007f70d2ce3160>):
+    3: .nav.justify-content-end
+    4:   = link_to '一覧', jobs_path, class: 'nav-link'
+    5: 
+    6: = form_with model: job, local: true do |f|
+    7:   .form-group
+    8:     = f.label :name
+    9:     = f.text_field :name, class: 'form-control', id: 'job_name'
+  
+app/views/jobs/edit.html.slim:6:in `_app_views_jobs_edit_html_slim___1600216477555644406_70061274897760'
+Started GET "/jobs/1/edit" for 172.18.0.1 at 2019-08-15 15:01:46 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:15
+  Rendering jobs/edit.html.slim within layouts/application
+  Rendered jobs/edit.html.slim within layouts/application (4.9ms)
+[Webpacker] Compiling…
+Started GET "/jobs/1/edit" for 172.18.0.1 at 2019-08-15 15:01:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:15
+  Rendering jobs/edit.html.slim within layouts/application
+  Rendered jobs/edit.html.slim within layouts/application (6.2ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 7846ms (Views: 7823.5ms | ActiveRecord: 0.6ms)
+
+
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 6844ms (Views: 6821.0ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/jobs/1" for 172.18.0.1 at 2019-08-15 15:02:01 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Skkxp09Cw2I/UXyNU84AerWZMfSd0wsPssRySMJ+IrBD2diA5pnNg718JN//uZnEfPHwS6r6YoJt0ivlpEXOvw==", "job"=>{"name"=>"aa", "description"=>"aa"}, "commit"=>"更新する", "id"=>"1"}
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:25
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:26
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:26
+Redirected to http://localhost:3000/jobs
+Completed 302 Found in 13ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/jobs" for 172.18.0.1 at 2019-08-15 15:02:02 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.slim:15
+  Rendered jobs/index.html.slim within layouts/application (8.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 7078ms (Views: 7059.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/jobs" for 172.18.0.1 at 2019-08-15 15:09:30 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.slim:15
+  Rendered jobs/index.html.slim within layouts/application (12.3ms)
+[Webpacker] Compiling…
+Started GET "/jobs/new" for 172.18.0.1 at 2019-08-15 15:09:33 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.slim within layouts/application
+  Rendered jobs/_form.html.slim (5.2ms)
+  Rendered jobs/new.html.slim within layouts/application (27.6ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 8976ms (Views: 8959.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/jobs/new" for 172.18.0.1 at 2019-08-15 15:09:40 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.slim within layouts/application
+  Rendered jobs/_form.html.slim (7.9ms)
+  Rendered jobs/new.html.slim within layouts/application (35.1ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 9401ms (Views: 9376.8ms | ActiveRecord: 0.0ms)
+
+
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 8661ms (Views: 8628.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/jobs" for 172.18.0.1 at 2019-08-15 15:09:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MEco0W1QFNBYQXLuCCBlFOTiRlqEOY70s/bK/008TJTTnENW39nH8cia5XUNQLP0/GlW5AD0s00H5IQ0O3hQCA==", "job"=>{"name"=>"ｄ", "description"=>"ｄ"}, "commit"=>"登録する"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:20
+  [1m[36mJob Create (3.1ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "ｄ"], ["description", "ｄ"], ["created_at", "2019-08-15 15:09:52.268752"], ["updated_at", "2019-08-15 15:09:52.268752"]]
+  ↳ app/controllers/jobs_controller.rb:20
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:20
+Redirected to http://localhost:3000/jobs
+Completed 302 Found in 17ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/jobs" for 172.18.0.1 at 2019-08-15 15:09:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.slim:15
+  Rendered jobs/index.html.slim within layouts/application (9.3ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 6454ms (Views: 6442.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/jobs/1/edit" for 172.18.0.1 at 2019-08-15 15:10:01 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:15
+  Rendering jobs/edit.html.slim within layouts/application
+  Rendered jobs/_form.html.slim (4.5ms)
+  Rendered jobs/edit.html.slim within layouts/application (28.8ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 8410ms (Views: 8373.0ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/jobs/1" for 172.18.0.1 at 2019-08-15 15:10:12 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dm+sqzScyErSN1UrPvy6TtLJOASq4rK9lXDK4LsGFeOtyk3jl8LAYEdXw2eSpu0+qXWsPkFYqtZGiISqNydoQA==", "job"=>{"name"=>"aa", "description"=>"aaｄｄｄ"}, "commit"=>"更新する", "id"=>"1"}
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:25
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:26
+  [1m[36mJob Update (0.7ms)[0m  [1m[33mUPDATE "jobs" SET "description" = $1, "updated_at" = $2 WHERE "jobs"."id" = $3[0m  [["description", "aaｄｄｄ"], ["updated_at", "2019-08-15 15:10:12.458434"], ["id", 1]]
+  ↳ app/controllers/jobs_controller.rb:26
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:26
+Redirected to http://localhost:3000/jobs
+Completed 302 Found in 16ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/jobs" for 172.18.0.1 at 2019-08-15 15:10:12 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.slim:15
+  Rendered jobs/index.html.slim within layouts/application (10.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 6805ms (Views: 6780.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/jobs" for 172.18.0.1 at 2019-08-15 15:14:22 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.slim:15
+  Rendered jobs/index.html.slim within layouts/application (19.6ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 6888ms (Views: 6857.9ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/jobs/2/edit" for 172.18.0.1 at 2019-08-15 15:14:43 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:15
+  Rendering jobs/edit.html.slim within layouts/application
+  Rendered jobs/_form.html.slim (4.6ms)
+  Rendered jobs/edit.html.slim within layouts/application (26.4ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 8255ms (Views: 8222.6ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/jobs/2" for 172.18.0.1 at 2019-08-15 15:14:54 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I0/jq8hQFkl857lm9WRLJ/pllR3ZjImV85g+uoeH0mRlkjpW+viNyhuvja8l4nxWiDbB55F0KHWI9NY90mtF2Q==", "job"=>{"name"=>"あああ", "description"=>"あああ"}, "commit"=>"更新する", "id"=>"2"}
+  [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:25
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:26
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:26
+Redirected to http://localhost:3000/jobs
+Completed 302 Found in 14ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/jobs" for 172.18.0.1 at 2019-08-15 15:14:54 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.slim:15
+  Rendered jobs/index.html.slim within layouts/application (23.5ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 7033ms (Views: 7016.6ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/jobs/2" for 172.18.0.1 at 2019-08-15 15:15:04 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5kdZV0PaiE1udMAUADazHcpDgvujxj681za6JmRKndTv17Bw6gGGrOxZmEasQSqjAytDRJTvVzEIIOOLAnFx2w==", "id"=>"2"}
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:31
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:32
+  [1m[36mJob Destroy (0.6ms)[0m  [1m[31mDELETE FROM "jobs" WHERE "jobs"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/jobs_controller.rb:32
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:32
+Redirected to http://localhost:3000/jobs
+Completed 302 Found in 14ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/jobs" for 172.18.0.1 at 2019-08-15 15:15:04 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.slim:15
+  Rendered jobs/index.html.slim within layouts/application (18.0ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 7659ms (Views: 7644.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/jobs/3/edit" for 172.18.0.1 at 2019-08-15 15:15:40 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:15
+  Rendering jobs/edit.html.slim within layouts/application
+  Rendered jobs/_form.html.slim (4.7ms)
+  Rendered jobs/edit.html.slim within layouts/application (27.8ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 8253ms (Views: 8222.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/jobs" for 172.18.0.1 at 2019-08-15 15:15:51 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.slim:15
+  Rendered jobs/index.html.slim within layouts/application (12.1ms)
+[Webpacker] Compiling…
+Started GET "/jobs/3" for 172.18.0.1 at 2019-08-15 15:15:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:7
+  Rendering jobs/show.html.slim within layouts/application
+  Rendered jobs/show.html.slim within layouts/application (214.0ms)
+Completed 500 Internal Server Error in 304ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `job' for #<#<Class:0x00007f70d296ee08>:0x00007f70c442f310>):
+    21:       td= @job.updated_at
+    22: 
+    23: = link_to '編集', edit_job_path, class: 'btn btn-primary mr-3'
+    24: = link_to '削除', job, method: :delete, data: { confirm: "タスク「#{job.name}」を削除します。よろしいですか？" }, class: 'btn btn-danger'
+  
+app/views/jobs/show.html.slim:24:in `_app_views_jobs_show_html_slim__2686950910859389781_70061152894500'
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 7819ms (Views: 7788.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/jobs/3" for 172.18.0.1 at 2019-08-15 15:17:49 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:7
+  Rendering jobs/show.html.slim within layouts/application
+  Rendered jobs/show.html.slim within layouts/application (5.0ms)
+[Webpacker] Compiling…
+Started GET "/jobs/3" for 172.18.0.1 at 2019-08-15 15:17:54 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:7
+  Rendering jobs/show.html.slim within layouts/application
+  Rendered jobs/show.html.slim within layouts/application (6.7ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 7437ms (Views: 7416.7ms | ActiveRecord: 0.5ms)
+
+
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 7566ms (Views: 7545.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/jobs" for 172.18.0.1 at 2019-08-15 15:18:06 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.slim:15
+  Rendered jobs/index.html.slim within layouts/application (11.3ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 9126ms (Views: 9101.4ms | ActiveRecord: 1.0ms)
+
+

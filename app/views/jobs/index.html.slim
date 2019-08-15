@@ -9,9 +9,15 @@ table.table.table-hover
       th= Job.human_attribute_name(:name)
       th= Job.human_attribute_name(:created_at)
       th= Job.human_attribute_name(:start_time)
+      th= Job.human_attribute_name(:end_time)
+      th
   tbody
     - @jobs.each do |job|
       tr
         td= link_to job.name, job
         td= job.created_at
         td= job.start_time
+        td= job.end_time
+        td
+          = link_to '編集', edit_job_path(job), class: 'btn btn-primary mr-3'
+          = link_to '削除', job, method: :delete, data: { confirm: "タスク「#{job.name}」を削除します。よろしいですか？" }, class: 'btn btn-danger'
