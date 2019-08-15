@@ -8,8 +8,10 @@ table.table.table-hover
     tr
       th= Job.human_attribute_name(:name)
       th= Job.human_attribute_name(:created_at)
+      th= Job.human_attribute_name(:start_time)
   tbody
     - @jobs.each do |job|
       tr
         td= link_to job.name, job
         td= job.created_at
+        td= job.start_time
