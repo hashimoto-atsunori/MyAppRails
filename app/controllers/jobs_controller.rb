@@ -16,10 +16,15 @@ class JobsController < ApplicationController
   end
 
   def create
-    job = Job.new(job_params)
-    job.save!
-    redirect_to jobs_url, notice: "タスク「#{job.name}」を登録しました。"
+    @job = Job.new(job_params)
+
+    if @job.save
+      redirect_to @job, notice: "タスク「#{@job.name}」を登録しました。"
+    else
+      render :new
+    end
   end
+
 
   def update
     job = Job.find(params[:id])

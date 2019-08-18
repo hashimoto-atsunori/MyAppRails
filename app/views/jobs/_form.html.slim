@@ -1,3 +1,8 @@
+- if job.errors.present?
+  ul#error_explanation
+    - job.errors.full_messages.each do |message|
+      li= message
+
 = form_with model: job, local: true do |f|
   .form-group
     = f.label :name
