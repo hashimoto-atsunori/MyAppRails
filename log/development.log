@@ -4367,3 +4367,344 @@ Processing by JobsController#show as HTML
 Completed 200 OK in 135ms (Views: 126.5ms | ActiveRecord: 1.3ms | Allocations: 21371)
 
 
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /Users/hashimotoatsunori/docker/myapp/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /myapp/config/environment.rb:5)
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from <main> at bin/rake:4)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /myapp/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /Users/hashimotoatsunori/docker/myapp/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /myapp/config/environment.rb:5)
+Started GET "/" for 172.18.0.1 at 2019-08-19 09:49:12 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 ORDER BY "jobs"."created_at" DESC[0m  [["user_id", 1]]
+  ↳ app/views/jobs/index.html.slim:15
+  Rendered jobs/index.html.slim within layouts/application (Duration: 100.2ms | Allocations: 26598)
+Completed 200 OK in 19744ms (Views: 19631.9ms | ActiveRecord: 9.7ms | Allocations: 1519899)
+
+
+Started GET "/jobs" for 172.18.0.1 at 2019-08-19 09:49:36 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 ORDER BY "jobs"."created_at" DESC[0m  [["user_id", 1]]
+  ↳ app/views/jobs/index.html.slim:15
+  Rendered jobs/index.html.slim within layouts/application (Duration: 5.8ms | Allocations: 1251)
+Completed 200 OK in 111ms (Views: 103.1ms | ActiveRecord: 1.8ms | Allocations: 21082)
+
+
+Started GET "/admin/users" for 172.18.0.1 at 2019-08-19 09:49:39 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering admin/users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.slim:16
+  Rendered admin/users/index.html.slim within layouts/application (Duration: 44.8ms | Allocations: 8548)
+Completed 200 OK in 136ms (Views: 122.4ms | ActiveRecord: 1.7ms | Allocations: 28921)
+
+
+Started GET "/jobs" for 172.18.0.1 at 2019-08-19 09:49:41 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 ORDER BY "jobs"."created_at" DESC[0m  [["user_id", 1]]
+  ↳ app/views/jobs/index.html.slim:15
+  Rendered jobs/index.html.slim within layouts/application (Duration: 5.3ms | Allocations: 1247)
+Completed 200 OK in 112ms (Views: 105.5ms | ActiveRecord: 1.6ms | Allocations: 21022)
+
+
+Started GET "/jobs/new" for 172.18.0.1 at 2019-08-19 09:49:42 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/new.html.slim within layouts/application
+  Rendered jobs/_form.html.slim (Duration: 1445.4ms | Allocations: 13438)
+  Rendered jobs/new.html.slim within layouts/application (Duration: 1461.9ms | Allocations: 15860)
+Completed 200 OK in 1546ms (Views: 1536.3ms | ActiveRecord: 0.7ms | Allocations: 35654)
+
+
+Started POST "/jobs" for 172.18.0.1 at 2019-08-19 09:49:46 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LejOMxqZ1R4ibS1TtQM0iPQAg82c/qVQ/K3HehviJ1XOM6W0qBAGP7K2usiwY+Jo7IuTcxgzmOlIv4mxbaY7yQ==", "job"=>{"name"=>"a", "description"=>"a"}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:21:in `create'
+  [1m[36mJob Create (0.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "a"], ["description", "a"], ["created_at", "2019-08-19 09:49:46.749311"], ["updated_at", "2019-08-19 09:49:46.749311"], ["user_id", 1]]
+  ↳ app/controllers/jobs_controller.rb:21:in `create'
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:21:in `create'
+Redirected to http://localhost:3000/jobs/44
+Completed 302 Found in 17ms (ActiveRecord: 3.2ms | Allocations: 3626)
+
+
+Started GET "/jobs/44" for 172.18.0.1 at 2019-08-19 09:49:46 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 AND "jobs"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:46:in `set_job'
+  Rendering jobs/show.html.slim within layouts/application
+  Rendered jobs/show.html.slim within layouts/application (Duration: 10.5ms | Allocations: 7163)
+Completed 200 OK in 144ms (Views: 130.8ms | ActiveRecord: 1.1ms | Allocations: 27816)
+
+
+Started GET "/jobs" for 172.18.0.1 at 2019-08-19 09:49:49 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 ORDER BY "jobs"."created_at" DESC[0m  [["user_id", 1]]
+  ↳ app/views/jobs/index.html.slim:15
+  Rendered jobs/index.html.slim within layouts/application (Duration: 5.3ms | Allocations: 1385)
+Completed 200 OK in 121ms (Views: 115.0ms | ActiveRecord: 1.4ms | Allocations: 21135)
+
+
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /myapp/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /myapp/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /myapp/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /myapp/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /myapp/config/environment.rb:5)
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from <main> at bin/rake:4)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /myapp/config/environment.rb:5)
+Started GET "/jobs" for 172.18.0.1 at 2019-08-19 12:20:18 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 ORDER BY "jobs"."created_at" DESC[0m  [["user_id", 1]]
+  ↳ app/views/jobs/index.html.slim:15
+  Rendered jobs/index.html.slim within layouts/application (Duration: 97.7ms | Allocations: 26268)
+Completed 200 OK in 18252ms (Views: 18109.0ms | ActiveRecord: 10.8ms | Allocations: 1505695)
+
+
+Started GET "/jobs" for 172.18.0.1 at 2019-08-19 12:20:41 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 ORDER BY "jobs"."created_at" DESC[0m  [["user_id", 1]]
+  ↳ app/views/jobs/index.html.slim:15
+  Rendered jobs/index.html.slim within layouts/application (Duration: 6.3ms | Allocations: 1402)
+Completed 200 OK in 94ms (Views: 88.3ms | ActiveRecord: 1.6ms | Allocations: 21174)
+
+
+Started DELETE "/logout" for 172.18.0.1 at 2019-08-19 12:20:44 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"WJLuug0rhju1Tzr7WwDs9Tn6J1zFwpKcjXMSO23isKBRAgedpPCI2jdiYqn3d3VL8JLm4/Lr+xFSZUuWC9lcrw=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 490)
+
+
+Started GET "/" for 172.18.0.1 at 2019-08-19 12:20:44 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :login_required rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 383)
+
+
+Started GET "/login" for 172.18.0.1 at 2019-08-19 12:20:44 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.slim within layouts/application
+  Rendered sessions/new.html.slim within layouts/application (Duration: 30.6ms | Allocations: 4546)
+Completed 200 OK in 137ms (Views: 132.2ms | ActiveRecord: 0.0ms | Allocations: 24249)
+
+
+Started POST "/login" for 172.18.0.1 at 2019-08-19 12:20:48 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K24xXqrxtMzLxA/06b4Ox6z1PRkRJXd13rLIFKovV5Fwsag6bRgLouVqjrGZZph+rnWhYLWramzTyvjncNchiA==", "session"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}, "commit"=>"ログインする"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 244ms (ActiveRecord: 0.6ms | Allocations: 1162)
+
+
+Started GET "/" for 172.18.0.1 at 2019-08-19 12:20:48 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 ORDER BY "jobs"."created_at" DESC[0m  [["user_id", 2]]
+  ↳ app/views/jobs/index.html.slim:15
+  Rendered jobs/index.html.slim within layouts/application (Duration: 3.8ms | Allocations: 936)
+Completed 200 OK in 106ms (Views: 100.8ms | ActiveRecord: 1.2ms | Allocations: 20706)
+
+
+Started GET "/jobs/new" for 172.18.0.1 at 2019-08-19 12:20:49 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/new.html.slim within layouts/application
+  Rendered jobs/_form.html.slim (Duration: 1395.4ms | Allocations: 12896)
+  Rendered jobs/new.html.slim within layouts/application (Duration: 1406.2ms | Allocations: 15306)
+Completed 200 OK in 1498ms (Views: 1485.5ms | ActiveRecord: 0.7ms | Allocations: 35078)
+
+
+Started POST "/jobs" for 172.18.0.1 at 2019-08-19 12:20:53 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NTAoL2dP3CtuUqyMeyr6ewkLWDAIEk4XJ994hJysBz06mhoMWiMBbyCMmxumyORGfIFtevtQyNz/m357Dkhpaw==", "job"=>{"name"=>"a", "description"=>"a"}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:21:in `create'
+  [1m[36mJob Create (0.8ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "a"], ["description", "a"], ["created_at", "2019-08-19 12:20:53.517687"], ["updated_at", "2019-08-19 12:20:53.517687"], ["user_id", 2]]
+  ↳ app/controllers/jobs_controller.rb:21:in `create'
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:21:in `create'
+Redirected to http://localhost:3000/jobs/45
+Completed 302 Found in 20ms (ActiveRecord: 3.8ms | Allocations: 3600)
+
+
+Started GET "/jobs/45" for 172.18.0.1 at 2019-08-19 12:20:53 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 AND "jobs"."id" = $2 LIMIT $3[0m  [["user_id", 2], ["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:46:in `set_job'
+  Rendering jobs/show.html.slim within layouts/application
+  Rendered jobs/show.html.slim within layouts/application (Duration: 9.7ms | Allocations: 7167)
+Completed 200 OK in 146ms (Views: 133.7ms | ActiveRecord: 1.1ms | Allocations: 27806)
+
+
+Started GET "/jobs" for 172.18.0.1 at 2019-08-19 12:20:55 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 ORDER BY "jobs"."created_at" DESC[0m  [["user_id", 2]]
+  ↳ app/views/jobs/index.html.slim:15
+  Rendered jobs/index.html.slim within layouts/application (Duration: 6.1ms | Allocations: 1085)
+Completed 200 OK in 109ms (Views: 102.3ms | ActiveRecord: 1.3ms | Allocations: 20828)
+
+
+Started GET "/jobs" for 172.18.0.1 at 2019-08-19 12:20:57 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 ORDER BY "jobs"."created_at" DESC[0m  [["user_id", 2]]
+  ↳ app/views/jobs/index.html.slim:15
+  Rendered jobs/index.html.slim within layouts/application (Duration: 5.0ms | Allocations: 1083)
+Completed 200 OK in 105ms (Views: 97.9ms | ActiveRecord: 1.1ms | Allocations: 20818)
+
+
+Started DELETE "/logout" for 172.18.0.1 at 2019-08-19 12:24:20 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PrKYoIYhZ7Glp6qoCgsfpI9J4Q2/rnNADzu/klL8+yRlbQHEQcjY34sJK+1604kdjcl9dBsgblkCQ49hiASNPQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 416)
+
+
+Started GET "/" for 172.18.0.1 at 2019-08-19 12:24:20 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :login_required rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 383)
+
+
+Started GET "/login" for 172.18.0.1 at 2019-08-19 12:24:20 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.slim within layouts/application
+  Rendered sessions/new.html.slim within layouts/application (Duration: 0.8ms | Allocations: 395)
+Completed 200 OK in 81ms (Views: 80.1ms | ActiveRecord: 0.0ms | Allocations: 19408)
+
+
