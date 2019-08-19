@@ -1,10 +1,11 @@
 class JobsController < ApplicationController
+  before_action :set_job, only: [:show, :edit, :update, :destroy]
+
   def index
-    @jobs = Job.all
+    @jobs = current_user.jobs.order(created_at: :desc)
   end
 
   def show
-    @job = Job.find(params[:id])
   end
 
   def new
@@ -12,11 +13,10 @@ class JobsController < ApplicationController
   end
 
   def edit
-    @job = Job.find(params[:id])
   end
 
   def create
-    @job = Job.new(job_params)
+    @job = current_user.jobs.new(job_params)
 
     if @job.save
       redirect_to @job, notice: "タスク「#{@job.name}」を登録しました。"
@@ -27,20 +27,22 @@ class JobsController < ApplicationController
 
 
   def update
-    job = Job.find(params[:id])
-    job.update!(job_params)
-    redirect_to jobs_url, notice: "タスク「#{job.name}」を更新しました。"
+    @job.update!(job_params)
+    redirect_to jobs_url, notice: "タスク「#{@job.name}」を更新しました。"
   end
 
   def destroy
-    job = Job.find(params[:id])
-    job.destroy
-    redirect_to jobs_url, notice: "タスク「#{job.name}」を削除しました。"
+    @job.destroy
+    redirect_to jobs_url, notice: "タスク「#{@job.name}」を削除しました。"
   end
 
   private
 
   def job_params
     params.require(:job).permit(:name, :description)
+  end
+
+  def set_job
+    @job = current_user.jobs.find(params[:id])
   end
 end
