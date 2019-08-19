@@ -8,13 +8,20 @@ services:
       - postgresql-data:/var/lib/postgresql/data
   web:
     build: .
-    command: bash -c "npm install -g yarn && yarn install --check-files && rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
       - .:/myapp
     ports:
       - "3000:3000"
+  #ここにHeadless Chromeを使うためのコンテナを追加--------------------
     depends_on:
       - db
+      - chrome
+  chrome:
+    image: selenium/standalone-chrome:3.141.59-dubnium
+    ports:
+      - 4444:4444
+ #------------------------------------------------------------
 volumes:
   postgresql-data:
     driver: local
