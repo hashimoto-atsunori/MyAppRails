@@ -14,6 +14,9 @@ table.table.table-hover
       th= Job.human_attribute_name(:description)
       td= auto_link(simple_format(h(@job.description), {}, sanitize: false, wrapper_tag: "div"))
     tr
+      th= Job.human_attribute_name(:image)
+      td= image_tag @job.image if @job.image.attached?
+    tr
       th= Job.human_attribute_name(:created_at)
       td= @job.created_at
     tr

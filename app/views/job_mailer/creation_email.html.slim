@@ -1,0 +1,9 @@
+| 以下のタスクを作成しました
+
+ul
+  li
+    | 名称：
+    = @job.name
+  li
+    | 詳細情報：
+    = simple_format(@job.description)

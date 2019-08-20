@@ -4708,3 +4708,966 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 81ms (Views: 80.1ms | ActiveRecord: 0.0ms | Allocations: 19408)
 
 
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (3.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (3.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "admin") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "admin"], ["email", "admin@admin.com"], ["password_digest", "$2a$12$KhIaAkXOYIncgAepbGiIAONqrtnt2Vp2/3NDxvWw04lGyOEyHz4fq"], ["created_at", "2019-08-20 12:52:06.273609"], ["updated_at", "2019-08-20 12:52:06.273609"], ["admin", true]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /myapp/config/environment.rb:5)
+Started GET "/login" for 172.18.0.1 at 2019-08-20 12:53:42 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.slim within layouts/application
+  Rendered sessions/new.html.slim within layouts/application (Duration: 63.6ms | Allocations: 12692)
+Completed 200 OK in 21850ms (Views: 21822.0ms | ActiveRecord: 0.0ms | Allocations: 1511951)
+
+
+Started POST "/login" for 172.18.0.1 at 2019-08-20 12:54:04 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R+6v33ySvw1rLsrT2mTu1nu5zVZziMlZm3ckUpNVMUdyEY65MtuBu/4TkAME5wkkNNe+XXeWwseUC4vFTaSs1g==", "session"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]"}, "commit"=>"ログインする"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 250ms (ActiveRecord: 5.1ms | Allocations: 8980)
+
+
+Started GET "/" for 172.18.0.1 at 2019-08-20 12:54:05 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[36mJob Load (3.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 ORDER BY "jobs"."created_at" DESC[0m  [["user_id", 3]]
+  ↳ app/views/jobs/index.html.slim:15
+  Rendered jobs/index.html.slim within layouts/application (Duration: 82.1ms | Allocations: 12098)
+Completed 200 OK in 233ms (Views: 163.7ms | ActiveRecord: 4.9ms | Allocations: 40207)
+
+
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from <main> at bin/rake:4)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /Users/hashimotoatsunori/docker/myapp/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /Users/hashimotoatsunori/docker/myapp/config/environment.rb:5)
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7864839756650184315)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateActiveStorageTables (20190820144930)
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (35.3ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "byte_size" bigint NOT NULL, "checksum" character varying NOT NULL, "created_at" timestamp NOT NULL)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_blobs_on_key" ON "active_storage_blobs"  ("key")[0m
+  [1m[35m (12.0ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE  INDEX  "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments"  ("blob_id")[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_attachments_uniqueness" ON "active_storage_attachments"  ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190820144930"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /Users/hashimotoatsunori/docker/myapp/config/environment.rb:5)
+DEPRECATION WARNING: The -e option is deprecated and will be removed in the near future. Please use the html2slim gem or the html2haml gem to convert erb templates manually. (called from <main> at bin/rails:4)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /myapp/config/environment.rb:5)
+Started GET "/" for 172.18.0.1 at 2019-08-20 15:38:44 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "jobs"."id") FROM "jobs" WHERE "jobs"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/jobs/index.html.slim:18
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT DISTINCT "jobs"."id" AS count_column FROM "jobs" WHERE "jobs"."user_id" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["user_id", 3], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:19
+  [1m[36mJob Load (1.5ms)[0m  [1m[34mSELECT DISTINCT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 3], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:31
+  Rendered jobs/index.html.slim within layouts/application (Duration: 306.2ms | Allocations: 52519)
+Started GET "/jobs" for 172.18.0.1 at 2019-08-20 15:38:48 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(DISTINCT "jobs"."id") FROM "jobs" WHERE "jobs"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/jobs/index.html.slim:18
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT DISTINCT "jobs"."id" AS count_column FROM "jobs" WHERE "jobs"."user_id" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["user_id", 3], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:19
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 3], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:31
+  Rendered jobs/index.html.slim within layouts/application (Duration: 16.5ms | Allocations: 3717)
+Completed 200 OK in 27059ms (Views: 26873.6ms | ActiveRecord: 12.2ms | Allocations: 2483009)
+
+
+Completed 200 OK in 26251ms (Views: 26242.4ms | ActiveRecord: 3.5ms | Allocations: 2030005)
+
+
+Started GET "/admin/users" for 172.18.0.1 at 2019-08-20 15:39:16 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering admin/users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.slim:16
+  Rendered admin/users/index.html.slim within layouts/application (Duration: 22.2ms | Allocations: 8881)
+Completed 200 OK in 129ms (Views: 120.7ms | ActiveRecord: 1.4ms | Allocations: 29737)
+
+
+Started GET "/jobs" for 172.18.0.1 at 2019-08-20 15:39:20 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(DISTINCT "jobs"."id") FROM "jobs" WHERE "jobs"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/jobs/index.html.slim:18
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT DISTINCT "jobs"."id" AS count_column FROM "jobs" WHERE "jobs"."user_id" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["user_id", 3], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:19
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 3], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:31
+  Rendered jobs/index.html.slim within layouts/application (Duration: 21.3ms | Allocations: 3671)
+Completed 200 OK in 139ms (Views: 128.1ms | ActiveRecord: 3.7ms | Allocations: 23944)
+
+
+Started GET "/jobs/new" for 172.18.0.1 at 2019-08-20 15:39:23 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/new.html.slim within layouts/application
+  Rendered jobs/_form.html.slim (Duration: 39.4ms | Allocations: 5453)
+  Rendered jobs/new.html.slim within layouts/application (Duration: 50.8ms | Allocations: 7858)
+Completed 200 OK in 183ms (Views: 167.7ms | ActiveRecord: 0.7ms | Allocations: 32531)
+
+
+Started POST "/jobs" for 172.18.0.1 at 2019-08-20 15:39:26 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6LwzOBnFDNsejh7nhsgglMrMGacUcZNglYQ//GkeOGtAsWo/h9Tcp1j5KgYZfR/LrBbH2UGFpEavpzfYrUJs4w==", "job"=>{"name"=>"a", "description"=>"a"}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:37:in `create'
+  [1m[36mJob Create (3.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "a"], ["description", "a"], ["created_at", "2019-08-20 15:39:26.879094"], ["updated_at", "2019-08-20 15:39:26.879094"], ["user_id", 3]]
+  ↳ app/controllers/jobs_controller.rb:37:in `create'
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:37:in `create'
+  Rendering job_mailer/creation_email.html.slim within layouts/mailer
+  Rendered job_mailer/creation_email.html.slim within layouts/mailer (Duration: 6.4ms | Allocations: 2703)
+  Rendering job_mailer/creation_email.text.slim within layouts/mailer
+  Rendered job_mailer/creation_email.text.slim within layouts/mailer (Duration: 5.4ms | Allocations: 2336)
+JobMailer#creation_email: processed outbound mail in 47.7ms
+Delivered mail 5d5c142f3eef3_13f82b200b1fc293b6@479d875c9c28.mail (36.3ms)
+Date: Tue, 20 Aug 2019 15:39:27 +0000
+From: toggl@example.com
+To: user@example.com
+Message-ID: <5d5c142f3eef3_13f82b200b1fc293b6@479d875c9c28.mail>
+Subject: =?UTF-8?Q?=E3=82=BF=E3=82=B9=E3=82=AF=E4=BD=9C=E6=88=90=E5=AE=8C=E4=BA=86=E3=83=A1=E3=83=BC=E3=83=AB?=
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5d5c142f3b774_13f82b200b1fc292c9";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5d5c142f3b774_13f82b200b1fc292c9
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+5Lul5LiL44Gu44K/44K544Kv44KS5L2c5oiQ44GX44G+44GX44GfDQrlkI3n
+p7DvvJphDQroqbPjgZfjgYToqqzmmI7vvJoNCmE=
+
+----==_mimepart_5d5c142f3b774_13f82b200b1fc292c9
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIGh0bWw+PGh0bWw+PGhlYWQ+PG1ldGEgY29udGVudD0idGV4
+dC9odG1sOyBjaGFyc2V0PXV0Zi04IiBodHRwLWVxdWl2PSJDb250ZW50LVR5
+cGUiIC8+PHN0eWxlPiAvKiBFbWFpbCBzdHlsZXMgbmVlZCB0byBiZSBpbmxp
+bmUgKi8gPC9zdHlsZT48L2hlYWQ+PGJvZHk+5Lul5LiL44Gu44K/44K544Kv
+44KS5L2c5oiQ44GX44G+44GX44GfPHVsPjxsaT7lkI3np7DvvJphPC9saT48
+bGk+6Kmz57Sw5oOF5aCx77yaPHA+YTwvcD48L2xpPjwvdWw+PC9ib2R5Pjwv
+aHRtbD4=
+
+----==_mimepart_5d5c142f3b774_13f82b200b1fc292c9--
+
+Redirected to http://localhost:3000/jobs/46
+Completed 302 Found in 430ms (ActiveRecord: 6.1ms | Allocations: 49626)
+
+
+Started GET "/jobs/46" for 172.18.0.1 at 2019-08-20 15:39:27 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"46"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 AND "jobs"."id" = $2 LIMIT $3[0m  [["user_id", 3], ["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:68:in `set_job'
+  Rendering jobs/show.html.slim within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 46], ["record_type", "Job"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/jobs/show.html.slim:18
+  Rendered jobs/show.html.slim within layouts/application (Duration: 34.1ms | Allocations: 12101)
+Completed 200 OK in 142ms (Views: 127.1ms | ActiveRecord: 4.4ms | Allocations: 33148)
+
+
+Started GET "/jobs" for 172.18.0.1 at 2019-08-20 15:39:29 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(DISTINCT "jobs"."id") FROM "jobs" WHERE "jobs"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/jobs/index.html.slim:18
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT DISTINCT "jobs"."id" AS count_column FROM "jobs" WHERE "jobs"."user_id" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["user_id", 3], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:19
+  [1m[36mJob Load (1.2ms)[0m  [1m[34mSELECT DISTINCT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 3], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:31
+  Rendered jobs/index.html.slim within layouts/application (Duration: 17.2ms | Allocations: 3766)
+Completed 200 OK in 156ms (Views: 114.7ms | ActiveRecord: 3.6ms | Allocations: 24025)
+
+
+Started GET "/jobs?utf8=%E2%9C%93&q%5Bname_cont%5D=a&q%5Bcreated_at_gteq%5D=&commit=%E6%A4%9C%E7%B4%A2" for 172.18.0.1 at 2019-08-20 15:39:36 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>"a", "created_at_gteq"=>""}, "commit"=>"検索"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT COUNT(DISTINCT "jobs"."id") FROM "jobs" WHERE "jobs"."user_id" = $1 AND "jobs"."name" ILIKE '%a%'[0m  [["user_id", 3]]
+  ↳ app/views/jobs/index.html.slim:18
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT DISTINCT "jobs"."id" AS count_column FROM "jobs" WHERE "jobs"."user_id" = $1 AND "jobs"."name" ILIKE '%a%' LIMIT $2 OFFSET $3) subquery_for_count[0m  [["user_id", 3], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:19
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 AND "jobs"."name" ILIKE '%a%' LIMIT $2 OFFSET $3[0m  [["user_id", 3], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:31
+  Rendered jobs/index.html.slim within layouts/application (Duration: 20.3ms | Allocations: 3849)
+Completed 200 OK in 125ms (Views: 115.5ms | ActiveRecord: 5.0ms | Allocations: 24274)
+
+
+Started GET "/jobs/new" for 172.18.0.1 at 2019-08-20 15:39:37 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/new.html.slim within layouts/application
+  Rendered jobs/_form.html.slim (Duration: 3.5ms | Allocations: 845)
+  Rendered jobs/new.html.slim within layouts/application (Duration: 4.7ms | Allocations: 962)
+Completed 200 OK in 110ms (Views: 105.3ms | ActiveRecord: 0.7ms | Allocations: 20976)
+
+
+Started POST "/jobs" for 172.18.0.1 at 2019-08-20 15:39:39 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OgGn8gCEheO8fANe2bs6WyRUAgElASBtEUsAoqYuIA+SDP71npVVn/oLN79GDgUEQo7cf3D1F0sraAiGYnJ0hw==", "job"=>{"name"=>"a", "description"=>"a"}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:37:in `create'
+  [1m[36mJob Create (0.8ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "a"], ["description", "a"], ["created_at", "2019-08-20 15:39:39.994900"], ["updated_at", "2019-08-20 15:39:39.994900"], ["user_id", 3]]
+  ↳ app/controllers/jobs_controller.rb:37:in `create'
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:37:in `create'
+  Rendering job_mailer/creation_email.html.slim within layouts/mailer
+  Rendered job_mailer/creation_email.html.slim within layouts/mailer (Duration: 0.5ms | Allocations: 129)
+  Rendering job_mailer/creation_email.text.slim within layouts/mailer
+  Rendered job_mailer/creation_email.text.slim within layouts/mailer (Duration: 0.2ms | Allocations: 12)
+JobMailer#creation_email: processed outbound mail in 6.5ms
+Delivered mail 5d5c143c37f6_13f82b200b0e4295f3@479d875c9c28.mail (4.9ms)
+Date: Tue, 20 Aug 2019 15:39:40 +0000
+From: toggl@example.com
+To: user@example.com
+Message-ID: <5d5c143c37f6_13f82b200b0e4295f3@479d875c9c28.mail>
+Subject: =?UTF-8?Q?=E3=82=BF=E3=82=B9=E3=82=AF=E4=BD=9C=E6=88=90=E5=AE=8C=E4=BA=86=E3=83=A1=E3=83=BC=E3=83=AB?=
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5d5c143c28d7_13f82b200b0e42941b";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5d5c143c28d7_13f82b200b0e42941b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+5Lul5LiL44Gu44K/44K544Kv44KS5L2c5oiQ44GX44G+44GX44GfDQrlkI3n
+p7DvvJphDQroqbPjgZfjgYToqqzmmI7vvJoNCmE=
+
+----==_mimepart_5d5c143c28d7_13f82b200b0e42941b
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIGh0bWw+PGh0bWw+PGhlYWQ+PG1ldGEgY29udGVudD0idGV4
+dC9odG1sOyBjaGFyc2V0PXV0Zi04IiBodHRwLWVxdWl2PSJDb250ZW50LVR5
+cGUiIC8+PHN0eWxlPiAvKiBFbWFpbCBzdHlsZXMgbmVlZCB0byBiZSBpbmxp
+bmUgKi8gPC9zdHlsZT48L2hlYWQ+PGJvZHk+5Lul5LiL44Gu44K/44K544Kv
+44KS5L2c5oiQ44GX44G+44GX44GfPHVsPjxsaT7lkI3np7DvvJphPC9saT48
+bGk+6Kmz57Sw5oOF5aCx77yaPHA+YTwvcD48L2xpPjwvdWw+PC9ib2R5Pjwv
+aHRtbD4=
+
+----==_mimepart_5d5c143c28d7_13f82b200b0e42941b--
+
+Redirected to http://localhost:3000/jobs/47
+Completed 302 Found in 32ms (ActiveRecord: 3.4ms | Allocations: 11775)
+
+
+Started GET "/jobs/47" for 172.18.0.1 at 2019-08-20 15:39:40 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 AND "jobs"."id" = $2 LIMIT $3[0m  [["user_id", 3], ["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:68:in `set_job'
+  Rendering jobs/show.html.slim within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 47], ["record_type", "Job"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/jobs/show.html.slim:18
+  Rendered jobs/show.html.slim within layouts/application (Duration: 5.7ms | Allocations: 1678)
+Completed 200 OK in 124ms (Views: 116.3ms | ActiveRecord: 1.7ms | Allocations: 22559)
+
+
+Started GET "/jobs" for 172.18.0.1 at 2019-08-20 15:39:42 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(DISTINCT "jobs"."id") FROM "jobs" WHERE "jobs"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/jobs/index.html.slim:18
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT DISTINCT "jobs"."id" AS count_column FROM "jobs" WHERE "jobs"."user_id" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["user_id", 3], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:19
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT DISTINCT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 3], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:31
+  Rendered jobs/index.html.slim within layouts/application (Duration: 16.6ms | Allocations: 3932)
+Completed 200 OK in 107ms (Views: 98.9ms | ActiveRecord: 3.5ms | Allocations: 24176)
+
+
+Started GET "/jobs/new" for 172.18.0.1 at 2019-08-20 15:39:44 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/new.html.slim within layouts/application
+  Rendered jobs/_form.html.slim (Duration: 3.2ms | Allocations: 839)
+  Rendered jobs/new.html.slim within layouts/application (Duration: 4.7ms | Allocations: 956)
+Completed 200 OK in 111ms (Views: 104.5ms | ActiveRecord: 0.7ms | Allocations: 20963)
+
+
+Started POST "/jobs" for 172.18.0.1 at 2019-08-20 15:39:47 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Wr31hbZ7IZZeaNmEP7aQY2elHgMm4yfe890fluL7PmvysKyCKGrx6hgf7WWgA688AX/AfXMXEPjJ/heyJqdq4w==", "job"=>{"name"=>"aaaa", "description"=>"aaaa"}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:37:in `create'
+  [1m[36mJob Create (0.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "aaaa"], ["description", "aaaa"], ["created_at", "2019-08-20 15:39:47.676066"], ["updated_at", "2019-08-20 15:39:47.676066"], ["user_id", 3]]
+  ↳ app/controllers/jobs_controller.rb:37:in `create'
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:37:in `create'
+  Rendering job_mailer/creation_email.html.slim within layouts/mailer
+  Rendered job_mailer/creation_email.html.slim within layouts/mailer (Duration: 0.4ms | Allocations: 129)
+  Rendering job_mailer/creation_email.text.slim within layouts/mailer
+  Rendered job_mailer/creation_email.text.slim within layouts/mailer (Duration: 0.1ms | Allocations: 12)
+JobMailer#creation_email: processed outbound mail in 6.5ms
+Delivered mail 5d5c1443a9c98_13f82b200b1702973a@479d875c9c28.mail (3.9ms)
+Date: Tue, 20 Aug 2019 15:39:47 +0000
+From: toggl@example.com
+To: user@example.com
+Message-ID: <5d5c1443a9c98_13f82b200b1702973a@479d875c9c28.mail>
+Subject: =?UTF-8?Q?=E3=82=BF=E3=82=B9=E3=82=AF=E4=BD=9C=E6=88=90=E5=AE=8C=E4=BA=86=E3=83=A1=E3=83=BC=E3=83=AB?=
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5d5c1443a8a7c_13f82b200b17029628";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5d5c1443a8a7c_13f82b200b17029628
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+5Lul5LiL44Gu44K/44K544Kv44KS5L2c5oiQ44GX44G+44GX44GfDQrlkI3n
+p7DvvJphYWFhDQroqbPjgZfjgYToqqzmmI7vvJoNCmFhYWE=
+
+----==_mimepart_5d5c1443a8a7c_13f82b200b17029628
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIGh0bWw+PGh0bWw+PGhlYWQ+PG1ldGEgY29udGVudD0idGV4
+dC9odG1sOyBjaGFyc2V0PXV0Zi04IiBodHRwLWVxdWl2PSJDb250ZW50LVR5
+cGUiIC8+PHN0eWxlPiAvKiBFbWFpbCBzdHlsZXMgbmVlZCB0byBiZSBpbmxp
+bmUgKi8gPC9zdHlsZT48L2hlYWQ+PGJvZHk+5Lul5LiL44Gu44K/44K544Kv
+44KS5L2c5oiQ44GX44G+44GX44GfPHVsPjxsaT7lkI3np7DvvJphYWFhPC9s
+aT48bGk+6Kmz57Sw5oOF5aCx77yaPHA+YWFhYTwvcD48L2xpPjwvdWw+PC9i
+b2R5PjwvaHRtbD4=
+
+----==_mimepart_5d5c1443a8a7c_13f82b200b17029628--
+
+Redirected to http://localhost:3000/jobs/48
+Completed 302 Found in 31ms (ActiveRecord: 3.3ms | Allocations: 11737)
+
+
+Started GET "/jobs/48" for 172.18.0.1 at 2019-08-20 15:39:47 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 AND "jobs"."id" = $2 LIMIT $3[0m  [["user_id", 3], ["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:68:in `set_job'
+  Rendering jobs/show.html.slim within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 48], ["record_type", "Job"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/jobs/show.html.slim:18
+  Rendered jobs/show.html.slim within layouts/application (Duration: 6.6ms | Allocations: 1674)
+Completed 200 OK in 117ms (Views: 107.8ms | ActiveRecord: 2.1ms | Allocations: 22565)
+
+
+Started GET "/jobs" for 172.18.0.1 at 2019-08-20 15:39:49 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(DISTINCT "jobs"."id") FROM "jobs" WHERE "jobs"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/jobs/index.html.slim:18
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT DISTINCT "jobs"."id" AS count_column FROM "jobs" WHERE "jobs"."user_id" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["user_id", 3], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:19
+  [1m[36mJob Load (1.1ms)[0m  [1m[34mSELECT DISTINCT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 3], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:31
+  Rendered jobs/index.html.slim within layouts/application (Duration: 20.9ms | Allocations: 4046)
+Completed 200 OK in 121ms (Views: 111.1ms | ActiveRecord: 3.4ms | Allocations: 24294)
+
+
+Started GET "/jobs.csv" for 172.18.0.1 at 2019-08-20 15:39:51 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#index as CSV
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT DISTINCT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 3], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/models/job.rb:18:in `block in generate_csv'
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 1)
+Sent data jobs-2019082151.csv (1416.7ms)
+Completed 200 OK in 1429ms (Views: 1416.3ms | ActiveRecord: 1.9ms | Allocations: 11474)
+
+
+Started GET "/jobs/new" for 172.18.0.1 at 2019-08-20 15:40:08 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#new as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/new.html.slim within layouts/application
+  Rendered jobs/_form.html.slim (Duration: 2.4ms | Allocations: 839)
+  Rendered jobs/new.html.slim within layouts/application (Duration: 4.0ms | Allocations: 956)
+Completed 200 OK in 130ms (Views: 121.4ms | ActiveRecord: 1.3ms | Allocations: 20969)
+
+
+Started POST "/jobs" for 172.18.0.1 at 2019-08-20 15:40:21 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F2ChbGc2mny+PQYODEoyxzgwXxGLbmwQKTGjhf3yxR2/bfhr+SdKAPhKMu+T/w2YXuqBb96aWzYTEquhOa6RlQ==", "job"=>{"name"=>"test", "description"=>"test", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f0549b12c40 @tempfile=#<Tempfile:/tmp/RackMultipart20190820-1-1aucjxn.png>, @original_filename="スクリーンショット 2019-05-11 15.24.33.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"job[image]\"; filename=\"\xE3\x82\xB9\xE3\x82\xAF\xE3\x83\xAA\xE3\x83\xBC\xE3\x83\xB3\xE3\x82\xB7\xE3\x83\xA7\xE3\x83\x83\xE3\x83\x88 2019-05-11 15.24.33.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:37:in `create'
+  [1m[36mJob Create (0.8ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "test"], ["description", "test"], ["created_at", "2019-08-20 15:40:21.508987"], ["updated_at", "2019-08-20 15:40:21.508987"], ["user_id", 3]]
+  ↳ app/controllers/jobs_controller.rb:37:in `create'
+  [1m[36mActiveStorage::Blob Load (1.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 49], ["record_type", "Job"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:37:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 49], ["record_type", "Job"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:37:in `create'
+  [1m[36mActiveStorage::Blob Create (0.9ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "infejiubrxxdtnvj82kp8y0mi4mr"], ["filename", "スクリーンショット 2019-05-11 15.24.33.png"], ["content_type", "image/png"], ["metadata", "{\"identified\":true}"], ["byte_size", 302919], ["checksum", "Q8FMlIHe/8IroUHnuJgyxw=="], ["created_at", "2019-08-20 15:40:21.720564"]]
+  ↳ app/controllers/jobs_controller.rb:37:in `create'
+  [1m[36mActiveStorage::Attachment Create (2.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "image"], ["record_type", "Job"], ["record_id", 49], ["blob_id", 1], ["created_at", "2019-08-20 15:40:21.725164"]]
+  ↳ app/controllers/jobs_controller.rb:37:in `create'
+  [1m[36mJob Update (0.9ms)[0m  [1m[33mUPDATE "jobs" SET "updated_at" = $1 WHERE "jobs"."id" = $2[0m  [["updated_at", "2019-08-20 15:40:21.731080"], ["id", 49]]
+  ↳ app/controllers/jobs_controller.rb:37:in `create'
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:37:in `create'
+[36m  Disk Storage (39.3ms) [0m[32mUploaded file to key: infejiubrxxdtnvj82kp8y0mi4mr (checksum: Q8FMlIHe/8IroUHnuJgyxw==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: fecdbebb-436a-4bb2-985c-2e5105059e16) to Async(default) with arguments: #<GlobalID:0x00007f054ba5df50 @uri=#<URI::GID gid://myapp/ActiveStorage::Blob/1>>
+  Rendering job_mailer/creation_email.html.slim within layouts/mailer
+  Rendered job_mailer/creation_email.html.slim within layouts/mailer (Duration: 0.4ms | Allocations: 127)
+  Rendering job_mailer/creation_email.text.slim within layouts/mailer
+  Rendered job_mailer/creation_email.text.slim within layouts/mailer (Duration: 0.1ms | Allocations: 12)
+JobMailer#creation_email: processed outbound mail in 14.2ms
+  [1m[36mActiveStorage::Blob Load (3.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Delivered mail 5d5c1465c6661_13f82b200b1fc2995c@479d875c9c28.mail (3.5ms)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fecdbebb-436a-4bb2-985c-2e5105059e16] Performing ActiveStorage::AnalyzeJob (Job ID: fecdbebb-436a-4bb2-985c-2e5105059e16) from Async(default) enqueued at 2019-08-20T15:40:21Z with arguments: #<GlobalID:0x00007f054babdf40 @uri=#<URI::GID gid://myapp/ActiveStorage::Blob/1>>
+Date: Tue, 20 Aug 2019 15:40:21 +0000
+From: toggl@example.com
+To: user@example.com
+Message-ID: <5d5c1465c6661_13f82b200b1fc2995c@479d875c9c28.mail>
+Subject: =?UTF-8?Q?=E3=82=BF=E3=82=B9=E3=82=AF=E4=BD=9C=E6=88=90=E5=AE=8C=E4=BA=86=E3=83=A1=E3=83=BC=E3=83=AB?=
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5d5c1465c5431_13f82b200b1fc2989c";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5d5c1465c5431_13f82b200b1fc2989c
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+5Lul5LiL44Gu44K/44K544Kv44KS5L2c5oiQ44GX44G+44GX44GfDQrlkI3n
+p7DvvJp0ZXN0DQroqbPjgZfjgYToqqzmmI7vvJoNCnRlc3Q=
+
+----==_mimepart_5d5c1465c5431_13f82b200b1fc2989c
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIGh0bWw+PGh0bWw+PGhlYWQ+PG1ldGEgY29udGVudD0idGV4
+dC9odG1sOyBjaGFyc2V0PXV0Zi04IiBodHRwLWVxdWl2PSJDb250ZW50LVR5
+cGUiIC8+PHN0eWxlPiAvKiBFbWFpbCBzdHlsZXMgbmVlZCB0byBiZSBpbmxp
+bmUgKi8gPC9zdHlsZT48L2hlYWQ+PGJvZHk+5Lul5LiL44Gu44K/44K544Kv
+44KS5L2c5oiQ44GX44G+44GX44GfPHVsPjxsaT7lkI3np7DvvJp0ZXN0PC9s
+aT48bGk+6Kmz57Sw5oOF5aCx77yaPHA+dGVzdDwvcD48L2xpPjwvdWw+PC9i
+b2R5PjwvaHRtbD4=
+
+----==_mimepart_5d5c1465c5431_13f82b200b1fc2989c--
+
+Redirected to http://localhost:3000/jobs/49
+Completed 302 Found in 325ms (ActiveRecord: 16.0ms | Allocations: 74507)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fecdbebb-436a-4bb2-985c-2e5105059e16] [36m  Disk Storage (9.5ms) [0m[34mDownloaded file from key: infejiubrxxdtnvj82kp8y0mi4mr[0m
+Started GET "/jobs/49" for 172.18.0.1 at 2019-08-20 15:40:21 +0000
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fecdbebb-436a-4bb2-985c-2e5105059e16] Skipping image analysis because the mini_magick gem isn't installed
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fecdbebb-436a-4bb2-985c-2e5105059e16]   [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fecdbebb-436a-4bb2-985c-2e5105059e16]   [1m[36mActiveStorage::Blob Update (0.8ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fecdbebb-436a-4bb2-985c-2e5105059e16]   [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fecdbebb-436a-4bb2-985c-2e5105059e16] Performed ActiveStorage::AnalyzeJob (Job ID: fecdbebb-436a-4bb2-985c-2e5105059e16) from Async(default) in 42.04ms
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"49"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 AND "jobs"."id" = $2 LIMIT $3[0m  [["user_id", 3], ["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:68:in `set_job'
+  Rendering jobs/show.html.slim within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 49], ["record_type", "Job"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/jobs/show.html.slim:18
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/jobs/show.html.slim:18
+  Rendered jobs/show.html.slim within layouts/application (Duration: 12.6ms | Allocations: 2993)
+Completed 200 OK in 127ms (Views: 117.8ms | ActiveRecord: 2.4ms | Allocations: 23872)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d04eb01a416aea8e475bfba3bc24eff4fbbc336d/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202019-05-11%2015.24.33.png" for 172.18.0.1 at 2019-08-20 15:40:22 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d04eb01a416aea8e475bfba3bc24eff4fbbc336d", "filename"=>"スクリーンショット 2019-05-11 15.24.33"}
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (0.9ms) [0m[34mGenerated URL for file at key: infejiubrxxdtnvj82kp8y0mi4mr (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhVzVtWldwcGRXSnllSGhrZEc1MmFqZ3lhM0E0ZVRCdGFUUnRjZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWNacGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ01qQXhPUzB3TlMweE1TQXhOUzR5TkM0ek15NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnlWRk15VTRNaVZDT1NWRk15VTRNaVZCUmlWRk15VTRNeVZCUVNWRk15VTRNeVZDUXlWRk15VTRNeVZDTXlWRk15VTRNaVZDTnlWRk15VTRNeVZCTnlWRk15VTRNeVU0TXlWRk15VTRNeVU0T0NVeU1ESXdNVGt0TURVdE1URWxNakF4TlM0eU5DNHpNeTV3Ym1jR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnNXBiV0ZuWlM5d2JtY0dPd1pVIiwiZXhwIjoiMjAxOS0wOC0yMFQxNTo0NToyMi4xMjRaIiwicHVyIjoiYmxvYl9rZXkifX0=--4d09f710c2b08c496427f6b34f08550746541b2c/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202019-05-11%2015.24.33.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22%253F%253F%253F%253F%253F%253F%253F%253F%253F+2019-05-11+15.24.33.png%22%3B+filename%2A%3DUTF-8%27%27%25E3%2582%25B9%25E3%2582%25AF%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%25B3%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%2583%25E3%2583%2588%25202019-05-11%252015.24.33.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhVzVtWldwcGRXSnllSGhrZEc1MmFqZ3lhM0E0ZVRCdGFUUnRjZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWNacGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ01qQXhPUzB3TlMweE1TQXhOUzR5TkM0ek15NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnlWRk15VTRNaVZDT1NWRk15VTRNaVZCUmlWRk15VTRNeVZCUVNWRk15VTRNeVZDUXlWRk15VTRNeVZDTXlWRk15VTRNaVZDTnlWRk15VTRNeVZCTnlWRk15VTRNeVU0TXlWRk15VTRNeVU0T0NVeU1ESXdNVGt0TURVdE1URWxNakF4TlM0eU5DNHpNeTV3Ym1jR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnNXBiV0ZuWlM5d2JtY0dPd1pVIiwiZXhwIjoiMjAxOS0wOC0yMFQxNTo0NToyMi4xMjRaIiwicHVyIjoiYmxvYl9rZXkifX0=--4d09f710c2b08c496427f6b34f08550746541b2c/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202019-05-11%2015.24.33.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22%253F%253F%253F%253F%253F%253F%253F%253F%253F+2019-05-11+15.24.33.png%22%3B+filename%2A%3DUTF-8%27%27%25E3%2582%25B9%25E3%2582%25AF%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%25B3%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%2583%25E3%2583%2588%25202019-05-11%252015.24.33.png
+Completed 302 Found in 16ms (ActiveRecord: 0.7ms | Allocations: 2489)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhVzVtWldwcGRXSnllSGhrZEc1MmFqZ3lhM0E0ZVRCdGFUUnRjZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWNacGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ01qQXhPUzB3TlMweE1TQXhOUzR5TkM0ek15NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnlWRk15VTRNaVZDT1NWRk15VTRNaVZCUmlWRk15VTRNeVZCUVNWRk15VTRNeVZDUXlWRk15VTRNeVZDTXlWRk15VTRNaVZDTnlWRk15VTRNeVZCTnlWRk15VTRNeVU0TXlWRk15VTRNeVU0T0NVeU1ESXdNVGt0TURVdE1URWxNakF4TlM0eU5DNHpNeTV3Ym1jR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnNXBiV0ZuWlM5d2JtY0dPd1pVIiwiZXhwIjoiMjAxOS0wOC0yMFQxNTo0NToyMi4xMjRaIiwicHVyIjoiYmxvYl9rZXkifX0=--4d09f710c2b08c496427f6b34f08550746541b2c/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202019-05-11%2015.24.33.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22%253F%253F%253F%253F%253F%253F%253F%253F%253F+2019-05-11+15.24.33.png%22%3B+filename%2A%3DUTF-8%27%27%25E3%2582%25B9%25E3%2582%25AF%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%25B3%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%2583%25E3%2583%2588%25202019-05-11%252015.24.33.png" for 172.18.0.1 at 2019-08-20 15:40:22 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"%3F%3F%3F%3F%3F%3F%3F%3F%3F 2019-05-11 15.24.33.png\"; filename*=UTF-8''%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202019-05-11%2015.24.33.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhVzVtWldwcGRXSnllSGhrZEc1MmFqZ3lhM0E0ZVRCdGFUUnRjZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWNacGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ01qQXhPUzB3TlMweE1TQXhOUzR5TkM0ek15NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnlWRk15VTRNaVZDT1NWRk15VTRNaVZCUmlWRk15VTRNeVZCUVNWRk15VTRNeVZDUXlWRk15VTRNeVZDTXlWRk15VTRNaVZDTnlWRk15VTRNeVZCTnlWRk15VTRNeVU0TXlWRk15VTRNeVU0T0NVeU1ESXdNVGt0TURVdE1URWxNakF4TlM0eU5DNHpNeTV3Ym1jR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnNXBiV0ZuWlM5d2JtY0dPd1pVIiwiZXhwIjoiMjAxOS0wOC0yMFQxNTo0NToyMi4xMjRaIiwicHVyIjoiYmxvYl9rZXkifX0=--4d09f710c2b08c496427f6b34f08550746541b2c", "filename"=>"スクリーンショット 2019-05-11 15.24.33"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 455)
+
+
+Started GET "/jobs" for 172.18.0.1 at 2019-08-20 15:40:27 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(DISTINCT "jobs"."id") FROM "jobs" WHERE "jobs"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/jobs/index.html.slim:18
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT DISTINCT "jobs"."id" AS count_column FROM "jobs" WHERE "jobs"."user_id" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["user_id", 3], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:19
+  [1m[36mJob Load (1.1ms)[0m  [1m[34mSELECT DISTINCT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 3], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:31
+  Rendered jobs/index.html.slim within layouts/application (Duration: 23.8ms | Allocations: 4276)
+Completed 200 OK in 107ms (Views: 97.8ms | ActiveRecord: 4.3ms | Allocations: 24529)
+
+
+Started GET "/jobs/49" for 172.18.0.1 at 2019-08-20 15:40:29 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"49"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 AND "jobs"."id" = $2 LIMIT $3[0m  [["user_id", 3], ["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:68:in `set_job'
+  Rendering jobs/show.html.slim within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 49], ["record_type", "Job"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/jobs/show.html.slim:18
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/jobs/show.html.slim:18
+  Rendered jobs/show.html.slim within layouts/application (Duration: 14.1ms | Allocations: 2690)
+Completed 200 OK in 116ms (Views: 101.8ms | ActiveRecord: 3.7ms | Allocations: 23538)
+
+
+Started GET "/jobs" for 172.18.0.1 at 2019-08-20 15:40:31 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(DISTINCT "jobs"."id") FROM "jobs" WHERE "jobs"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/jobs/index.html.slim:18
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT DISTINCT "jobs"."id" AS count_column FROM "jobs" WHERE "jobs"."user_id" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["user_id", 3], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:19
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 3], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:31
+  Rendered jobs/index.html.slim within layouts/application (Duration: 20.2ms | Allocations: 4205)
+Completed 200 OK in 127ms (Views: 117.5ms | ActiveRecord: 3.1ms | Allocations: 24453)
+
+
+Started GET "/jobs?utf8=%E2%9C%93&q%5Bname_cont%5D=test&q%5Bcreated_at_gteq%5D=&commit=%E6%A4%9C%E7%B4%A2" for 172.18.0.1 at 2019-08-20 15:40:39 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>"test", "created_at_gteq"=>""}, "commit"=>"検索"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "jobs"."id") FROM "jobs" WHERE "jobs"."user_id" = $1 AND "jobs"."name" ILIKE '%test%'[0m  [["user_id", 3]]
+  ↳ app/views/jobs/index.html.slim:18
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT DISTINCT "jobs"."id" AS count_column FROM "jobs" WHERE "jobs"."user_id" = $1 AND "jobs"."name" ILIKE '%test%' LIMIT $2 OFFSET $3) subquery_for_count[0m  [["user_id", 3], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:19
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 AND "jobs"."name" ILIKE '%test%' LIMIT $2 OFFSET $3[0m  [["user_id", 3], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:31
+  Rendered jobs/index.html.slim within layouts/application (Duration: 15.8ms | Allocations: 3840)
+Completed 200 OK in 122ms (Views: 113.4ms | ActiveRecord: 2.8ms | Allocations: 24249)
+
+
+Started GET "/jobs?utf8=%E2%9C%93&q%5Bname_cont%5D=&q%5Bcreated_at_gteq%5D=&commit=%E6%A4%9C%E7%B4%A2" for 172.18.0.1 at 2019-08-20 15:40:46 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>"", "created_at_gteq"=>""}, "commit"=>"検索"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "jobs"."id") FROM "jobs" WHERE "jobs"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/jobs/index.html.slim:18
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT DISTINCT "jobs"."id" AS count_column FROM "jobs" WHERE "jobs"."user_id" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["user_id", 3], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:19
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 3], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:31
+  Rendered jobs/index.html.slim within layouts/application (Duration: 14.6ms | Allocations: 4316)
+Completed 200 OK in 131ms (Views: 123.5ms | ActiveRecord: 2.5ms | Allocations: 24614)
+
+
+Started GET "/admin/users" for 172.18.0.1 at 2019-08-20 15:40:56 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering admin/users/index.html.slim within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.slim:16
+  Rendered admin/users/index.html.slim within layouts/application (Duration: 8.4ms | Allocations: 1705)
+Completed 200 OK in 113ms (Views: 106.9ms | ActiveRecord: 1.7ms | Allocations: 21712)
+
+
+Started DELETE "/logout" for 172.18.0.1 at 2019-08-20 15:40:58 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EjF1YzdjxVxVoWonPAsdxIB+Ki2s9sspLtWd8NVqtBInzlQFeSr76sCcMPfiiPo2zxBZJqjowLchqTJnC5spgw=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 461)
+
+
+Started GET "/" for 172.18.0.1 at 2019-08-20 15:40:59 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :login_required rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 383)
+
+
+Started GET "/login" for 172.18.0.1 at 2019-08-20 15:40:59 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.slim within layouts/application
+  Rendered sessions/new.html.slim within layouts/application (Duration: 14.7ms | Allocations: 3472)
+Completed 200 OK in 121ms (Views: 115.4ms | ActiveRecord: 0.0ms | Allocations: 23641)
+
+
+Started POST "/login" for 172.18.0.1 at 2019-08-20 15:41:01 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G4bq2LYz6laufsZTNljJ9Wof9Ao4HzDOtZcw+vR6yNpxkdYguIwvYzZtnYKoqqCTVLV6zq1+JocZslBHhqcC8Q==", "session"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}, "commit"=>"ログインする"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 241ms (ActiveRecord: 0.6ms | Allocations: 1164)
+
+
+Started GET "/" for 172.18.0.1 at 2019-08-20 15:41:01 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT "jobs"."id") FROM "jobs" WHERE "jobs"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/jobs/index.html.slim:18
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT DISTINCT "jobs"."id" AS count_column FROM "jobs" WHERE "jobs"."user_id" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:19
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:31
+  Rendered jobs/index.html.slim within layouts/application (Duration: 15.4ms | Allocations: 3743)
+Completed 200 OK in 105ms (Views: 98.9ms | ActiveRecord: 2.6ms | Allocations: 24007)
+
+
+Started GET "/?q%5Bs%5D=name+asc" for 172.18.0.1 at 2019-08-20 15:41:09 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#index as HTML
+  Parameters: {"q"=>{"s"=>"name asc"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT "jobs"."id") FROM "jobs" WHERE "jobs"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/jobs/index.html.slim:18
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT DISTINCT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 ORDER BY "jobs"."name" ASC LIMIT $2 OFFSET $3) subquery_for_count[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:19
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT DISTINCT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 ORDER BY "jobs"."name" ASC LIMIT $2 OFFSET $3[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:31
+  Rendered jobs/index.html.slim within layouts/application (Duration: 19.2ms | Allocations: 3744)
+Completed 200 OK in 116ms (Views: 106.8ms | ActiveRecord: 3.5ms | Allocations: 24087)
+
+
+Started GET "/?q%5Bs%5D=name+desc" for 172.18.0.1 at 2019-08-20 15:41:10 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#index as HTML
+  Parameters: {"q"=>{"s"=>"name desc"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "jobs"."id") FROM "jobs" WHERE "jobs"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/jobs/index.html.slim:18
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT DISTINCT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 ORDER BY "jobs"."name" DESC LIMIT $2 OFFSET $3) subquery_for_count[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:19
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT DISTINCT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 ORDER BY "jobs"."name" DESC LIMIT $2 OFFSET $3[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:31
+  Rendered jobs/index.html.slim within layouts/application (Duration: 19.0ms | Allocations: 3748)
+Completed 200 OK in 141ms (Views: 133.0ms | ActiveRecord: 3.2ms | Allocations: 24068)
+
+
+Started GET "/?q%5Bs%5D=name+asc" for 172.18.0.1 at 2019-08-20 15:41:11 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#index as HTML
+  Parameters: {"q"=>{"s"=>"name asc"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "jobs"."id") FROM "jobs" WHERE "jobs"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/jobs/index.html.slim:18
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT DISTINCT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 ORDER BY "jobs"."name" ASC LIMIT $2 OFFSET $3) subquery_for_count[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:19
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 ORDER BY "jobs"."name" ASC LIMIT $2 OFFSET $3[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:31
+  Rendered jobs/index.html.slim within layouts/application (Duration: 14.3ms | Allocations: 3739)
+Completed 200 OK in 146ms (Views: 136.9ms | ActiveRecord: 3.2ms | Allocations: 24060)
+
+
+Started GET "/jobs/45" for 172.18.0.1 at 2019-08-20 15:41:12 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 AND "jobs"."id" = $2 LIMIT $3[0m  [["user_id", 2], ["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:68:in `set_job'
+  Rendering jobs/show.html.slim within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 45], ["record_type", "Job"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/jobs/show.html.slim:18
+  Rendered jobs/show.html.slim within layouts/application (Duration: 6.5ms | Allocations: 1682)
+Completed 200 OK in 132ms (Views: 122.9ms | ActiveRecord: 2.1ms | Allocations: 22500)
+
+
+Started GET "/jobs" for 172.18.0.1 at 2019-08-20 15:41:14 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "jobs"."id") FROM "jobs" WHERE "jobs"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/jobs/index.html.slim:18
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT DISTINCT "jobs"."id" AS count_column FROM "jobs" WHERE "jobs"."user_id" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:19
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:31
+  Rendered jobs/index.html.slim within layouts/application (Duration: 41.4ms | Allocations: 3721)
+Completed 200 OK in 138ms (Views: 130.2ms | ActiveRecord: 2.7ms | Allocations: 23939)
+
+
+Started GET "/jobs/new" for 172.18.0.1 at 2019-08-20 15:41:15 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/new.html.slim within layouts/application
+  Rendered jobs/_form.html.slim (Duration: 3.0ms | Allocations: 845)
+  Rendered jobs/new.html.slim within layouts/application (Duration: 4.7ms | Allocations: 962)
+Completed 200 OK in 132ms (Views: 126.3ms | ActiveRecord: 0.6ms | Allocations: 20942)
+
+
+Started POST "/jobs" for 172.18.0.1 at 2019-08-20 15:41:19 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QPE5GwKptkE8ZkqBo705os/N1rBqUNnv3hE5BPBugJ9sHJJoYCLWQvtdOBQ5M+AzwdZDifuHtrQBkg6JGztDaw==", "job"=>{"name"=>"tete", "description"=>"tete"}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:37:in `create'
+  [1m[36mJob Create (0.6ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "tete"], ["description", "tete"], ["created_at", "2019-08-20 15:41:19.433971"], ["updated_at", "2019-08-20 15:41:19.433971"], ["user_id", 2]]
+  ↳ app/controllers/jobs_controller.rb:37:in `create'
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:37:in `create'
+  Rendering job_mailer/creation_email.html.slim within layouts/mailer
+  Rendered job_mailer/creation_email.html.slim within layouts/mailer (Duration: 0.5ms | Allocations: 127)
+  Rendering job_mailer/creation_email.text.slim within layouts/mailer
+  Rendered job_mailer/creation_email.text.slim within layouts/mailer (Duration: 0.2ms | Allocations: 12)
+JobMailer#creation_email: processed outbound mail in 8.7ms
+Delivered mail 5d5c149f6f785_13f82b200b0e43011d@479d875c9c28.mail (3.5ms)
+Date: Tue, 20 Aug 2019 15:41:19 +0000
+From: toggl@example.com
+To: user@example.com
+Message-ID: <5d5c149f6f785_13f82b200b0e43011d@479d875c9c28.mail>
+Subject: =?UTF-8?Q?=E3=82=BF=E3=82=B9=E3=82=AF=E4=BD=9C=E6=88=90=E5=AE=8C=E4=BA=86=E3=83=A1=E3=83=BC=E3=83=AB?=
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5d5c149f6e4b0_13f82b200b0e4300e8";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5d5c149f6e4b0_13f82b200b0e4300e8
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+5Lul5LiL44Gu44K/44K544Kv44KS5L2c5oiQ44GX44G+44GX44GfDQrlkI3n
+p7DvvJp0ZXRlDQroqbPjgZfjgYToqqzmmI7vvJoNCnRldGU=
+
+----==_mimepart_5d5c149f6e4b0_13f82b200b0e4300e8
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIGh0bWw+PGh0bWw+PGhlYWQ+PG1ldGEgY29udGVudD0idGV4
+dC9odG1sOyBjaGFyc2V0PXV0Zi04IiBodHRwLWVxdWl2PSJDb250ZW50LVR5
+cGUiIC8+PHN0eWxlPiAvKiBFbWFpbCBzdHlsZXMgbmVlZCB0byBiZSBpbmxp
+bmUgKi8gPC9zdHlsZT48L2hlYWQ+PGJvZHk+5Lul5LiL44Gu44K/44K544Kv
+44KS5L2c5oiQ44GX44G+44GX44GfPHVsPjxsaT7lkI3np7DvvJp0ZXRlPC9s
+aT48bGk+6Kmz57Sw5oOF5aCx77yaPHA+dGV0ZTwvcD48L2xpPjwvdWw+PC9i
+b2R5PjwvaHRtbD4=
+
+----==_mimepart_5d5c149f6e4b0_13f82b200b0e4300e8--
+
+Redirected to http://localhost:3000/jobs/50
+Completed 302 Found in 42ms (ActiveRecord: 4.9ms | Allocations: 11740)
+
+
+Started GET "/jobs/50" for 172.18.0.1 at 2019-08-20 15:41:19 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 AND "jobs"."id" = $2 LIMIT $3[0m  [["user_id", 2], ["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:68:in `set_job'
+  Rendering jobs/show.html.slim within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 50], ["record_type", "Job"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/jobs/show.html.slim:18
+  Rendered jobs/show.html.slim within layouts/application (Duration: 6.0ms | Allocations: 1679)
+Completed 200 OK in 119ms (Views: 111.2ms | ActiveRecord: 1.7ms | Allocations: 22528)
+
+
+Started GET "/jobs" for 172.18.0.1 at 2019-08-20 15:41:21 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT "jobs"."id") FROM "jobs" WHERE "jobs"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/jobs/index.html.slim:18
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT DISTINCT "jobs"."id" AS count_column FROM "jobs" WHERE "jobs"."user_id" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:19
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:31
+  Rendered jobs/index.html.slim within layouts/application (Duration: 16.9ms | Allocations: 3914)
+Completed 200 OK in 109ms (Views: 99.8ms | ActiveRecord: 3.1ms | Allocations: 24133)
+
+
+Started DELETE "/jobs/45" for 172.18.0.1 at 2019-08-20 15:41:24 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7I0QcxhJt6OV/sQQUT7tbQhGfFDV62an/0tG/VPSsyyGmiyLFvZylg3tn8HPzIQLNuzylECKcO5TbiZAIQ95Bw==", "id"=>"45"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 AND "jobs"."id" = $2 LIMIT $3[0m  [["user_id", 2], ["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:68:in `set_job'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:52:in `destroy'
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 45], ["record_type", "Job"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:52:in `destroy'
+  [1m[36mJob Destroy (0.6ms)[0m  [1m[31mDELETE FROM "jobs" WHERE "jobs"."id" = $1[0m  [["id", 45]]
+  ↳ app/controllers/jobs_controller.rb:52:in `destroy'
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:52:in `destroy'
+Redirected to http://localhost:3000/jobs
+Completed 302 Found in 22ms (ActiveRecord: 4.0ms | Allocations: 4864)
+
+
+Started GET "/jobs" for 172.18.0.1 at 2019-08-20 15:41:24 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "jobs"."id") FROM "jobs" WHERE "jobs"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/jobs/index.html.slim:18
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT DISTINCT "jobs"."id" AS count_column FROM "jobs" WHERE "jobs"."user_id" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:19
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:31
+  Rendered jobs/index.html.slim within layouts/application (Duration: 14.3ms | Allocations: 3721)
+Completed 200 OK in 133ms (Views: 126.5ms | ActiveRecord: 2.5ms | Allocations: 23971)
+
+
