@@ -73,3 +73,5 @@ gem 'devise', git: 'https://github.com/plataformatec/devise.git', branch: 'maste
 gem 'rubocop-rails'
 gem 'ransack'
 gem 'kaminari'
+gem 'ruby-debug-ide'
+gem 'debase'

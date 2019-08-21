@@ -11,5 +11,10 @@
   "devDependencies": {
     "elm-hot-webpack-loader": "^1.1.2",
     "webpack-dev-server": "^3.8.0"
-  }
+  },
+  "ctags": {
+    "executePath": "/Users/hashimotoatsunori/.rbenv/shims/ripper-tags",
+    "options": "--tag-file=.tags --recursive --force --exclude=/assets/ --exclude=.bundle --exclude=.git/ --exclude=coverage/ --exclude=.arcanist-extensions/ --exclude=log/ --exclude=tmp/ --exclude=bin/",
+    "fileName": ".tags"
+}
 }

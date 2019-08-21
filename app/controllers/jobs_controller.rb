@@ -54,8 +54,15 @@ class JobsController < ApplicationController
   end
 
   def import
-    current_user.jobs.import(params[:file])
-    redirect_to jobs_url, notice: "タスクを追加しました"
+
+    file = params[:file]
+
+    if file.nil? then
+      redirect_to jobs_url, notice: "CSVを設定しなさい クソガキが"
+    else
+      current_user.jobs.import(params[:file])
+      redirect_to jobs_url, notice: "タスクを追加しました"
+    end
   end
 
   private
