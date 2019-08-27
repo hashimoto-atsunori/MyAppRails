@@ -50,7 +50,6 @@ class JobsController < ApplicationController
 
   def destroy
     @job.destroy
-    redirect_to jobs_url, notice: "タスク「#{@job.name}」を削除しました。"
   end
 
   def import

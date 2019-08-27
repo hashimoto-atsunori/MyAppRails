@@ -6933,3 +6933,88 @@ Processing by JobsController#index as HTML
 Completed 200 OK in 176ms (Views: 168.8ms | ActiveRecord: 3.0ms | Allocations: 29072)
 
 
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /myapp/config/environment.rb:5)
+Started GET "/jobs" for 172.18.0.1 at 2019-08-27 14:07:09 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT "jobs"."id") FROM "jobs" WHERE "jobs"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/jobs/index.html.slim:18
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT DISTINCT "jobs"."id" AS count_column FROM "jobs" WHERE "jobs"."user_id" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:19
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT DISTINCT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:31
+  Rendered jobs/index.html.slim within layouts/application (Duration: 167.0ms | Allocations: 69579)
+Started GET "/jobs/new" for 172.18.0.1 at 2019-08-27 14:07:13 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/new.html.slim within layouts/application
+  Rendered jobs/_form.html.slim (Duration: 25.1ms | Allocations: 5324)
+  Rendered jobs/new.html.slim within layouts/application (Duration: 36.6ms | Allocations: 7763)
+Completed 200 OK in 25279ms (Views: 25135.7ms | ActiveRecord: 12.4ms | Allocations: 2493154)
+
+
+Completed 200 OK in 23159ms (Views: 23144.3ms | ActiveRecord: 1.8ms | Allocations: 2056227)
+
+
+Started GET "/jobs/new" for 172.18.0.1 at 2019-08-27 14:07:37 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/new.html.slim within layouts/application
+  Rendered jobs/_form.html.slim (Duration: 1.8ms | Allocations: 847)
+  Rendered jobs/new.html.slim within layouts/application (Duration: 3.2ms | Allocations: 965)
+Completed 200 OK in 142ms (Views: 136.1ms | ActiveRecord: 0.8ms | Allocations: 21552)
+
+
+Started GET "/jobs" for 172.18.0.1 at 2019-08-27 14:07:39 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(DISTINCT "jobs"."id") FROM "jobs" WHERE "jobs"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/jobs/index.html.slim:18
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT DISTINCT "jobs"."id" AS count_column FROM "jobs" WHERE "jobs"."user_id" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:19
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT DISTINCT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:31
+  Rendered jobs/index.html.slim within layouts/application (Duration: 25.6ms | Allocations: 9108)
+Completed 200 OK in 144ms (Views: 137.4ms | ActiveRecord: 2.7ms | Allocations: 29942)
+
+
+Started DELETE "/jobs/84" for 172.18.0.1 at 2019-08-27 14:07:42 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#destroy as JS
+  Parameters: {"id"=>"84"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 AND "jobs"."id" = $2 LIMIT $3[0m  [["user_id", 2], ["id", 84], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:74:in `set_job'
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:52:in `destroy'
+  [1m[36mActiveStorage::Attachment Load (2.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 84], ["record_type", "Job"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:52:in `destroy'
+  [1m[36mJob Destroy (0.7ms)[0m  [1m[31mDELETE FROM "jobs" WHERE "jobs"."id" = $1[0m  [["id", 84]]
+  ↳ app/controllers/jobs_controller.rb:52:in `destroy'
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:52:in `destroy'
+  Rendering jobs/destroy.js.erb
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "jobs"[0m
+  ↳ app/views/jobs/destroy.js.erb:4
+  Rendered jobs/destroy.js.erb (Duration: 6.5ms | Allocations: 784)
+Completed 200 OK in 71ms (Views: 12.1ms | ActiveRecord: 12.6ms | Allocations: 10330)
+
+
