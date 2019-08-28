@@ -7,6 +7,7 @@ html
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  /!= javascript_pack_tag 'application'
   body
     .app-title.navbar.navbar-expand-md.navbar-light.bg-light
       .navbar-brand Toggl
@@ -16,7 +17,7 @@ html
           li.nav-item= link_to 'タスク一覧', jobs_path, class: 'nav-link'
           - if current_user.admin?
             li.nav-item= link_to 'ユーザー一覧', admin_users_path, class: 'nav-link'
-          li.nav-item= link_to 'ログアウト', logout_path, method: :delete, class: 'nav-link'
+          li.nav-item= button_to 'ログアウト', logout_path, method: :delete, class: 'btn btn-link'
         - else
           li.nav-item= link_to 'ログイン', login_path, class: 'nav-link'
     .container
