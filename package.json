@@ -6,7 +6,10 @@
     "elm": "^0.19.0-no-deps",
     "elm-webpack-loader": "^6.0.0",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "vue": "^2.6.10",
+    "vue-loader": "^15.7.1",
+    "vue-template-compiler": "^2.6.10"
   },
   "devDependencies": {
     "elm-hot-webpack-loader": "^1.1.2",
@@ -16,5 +19,5 @@
     "executePath": "/Users/hashimotoatsunori/.rbenv/shims/ripper-tags",
     "options": "--tag-file=.tags --recursive --force --exclude=/assets/ --exclude=.bundle --exclude=.git/ --exclude=coverage/ --exclude=.arcanist-extensions/ --exclude=log/ --exclude=tmp/ --exclude=bin/",
     "fileName": ".tags"
-}
+  }
 }
