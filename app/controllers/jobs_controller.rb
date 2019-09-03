@@ -1,6 +1,7 @@
 class JobsController < ApplicationController
   before_action :set_job, only: [:show, :edit, :update, :destroy]
 
+  #ログイン後の初期画面
   def index
     @q = current_user.jobs.ransack(params[:q])
     @jobs = @q.result(distinct: true).page(params[:page])
@@ -9,6 +10,9 @@ class JobsController < ApplicationController
       format.html
       format.csv { send_data @jobs.generate_csv, filename: "jobs-#{Time.zone.now.strftime('%Y%m%d%S')}.csv" }
     end
+
+    #初期画面から登録する
+    @job = Job.new
   end
 
   def show
@@ -36,7 +40,7 @@ class JobsController < ApplicationController
 
     if @job.save
       JobMailer.creation_email(@job).deliver_now
-      redirect_to @job, notice: "タスク「#{@job.name}」を登録しました。"
+      redirect_to jobs_url, notice: "タスク「#{@job.name}」を登録しました。"
     else
       render :new
     end
@@ -53,12 +57,13 @@ class JobsController < ApplicationController
     redirect_to jobs_url, notice: "タスク「#{@job.name}」を削除しました。"
   end
 
+  #CSVインポート
   def import
 
     file = params[:file]
 
     if file.nil? then
-      redirect_to jobs_url, notice: "CSVを設定してください。何でもしますから（何でもするとは言ってない）"
+      redirect_to jobs_url, notice: "CSVを設定してください"
     else
       current_user.jobs.import(params[:file])
       redirect_to jobs_url, notice: "タスクを追加しました"

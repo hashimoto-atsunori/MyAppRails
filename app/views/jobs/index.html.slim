@@ -1,5 +1,27 @@
 h1 Timer
 
+.mb-3
+= form_with model: @job, local: true do |f|
+  .form-inline
+    .form-group
+      = f.label :name, 'Task',class: 'col-sm-2 col-form-label'
+    .form-group.row
+      .col-sm-10
+       = f.text_field :name, class: 'form-control mr-3', id: 'job_name',placeholder: 'What are you working on?',style: 'width:600px;'
+    .form-group#timer
+      .col-sm-10
+        | 00:00:00  
+    .form-group
+      .col-sm-10
+        button[ class = 'btn btn-primary' id = 'start' ]START
+    .form-group
+      .col-sm-10
+        = f.submit 'STOP', class: 'btn btn-danger', id: 'stop' ,disabled: ''
+    .form-group
+      .col-sm-10
+        button[ class = 'btn btn-secondary' id = 'reset' ]RESET
+
+.mb-3
 = search_form_for @q, class: 'mb-5' do |f|
   .form-group.row
     = f.label :name_cont, '名称', class: 'col-sm-2 col-form-label'
