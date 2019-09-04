@@ -4,7 +4,7 @@ class JobsController < ApplicationController
   #ログイン後の初期画面
   def index
     @q = current_user.jobs.ransack(params[:q])
-    @jobs = @q.result(distinct: true).page(params[:page])
+    @jobs = @q.result(distinct: true).page(params[:page]).order(created_at: :desc)
 
     respond_to do |format|
       format.html
