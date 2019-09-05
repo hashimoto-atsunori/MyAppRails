@@ -19,6 +19,7 @@ html
           li.nav-item= button_to 'ログアウト', logout_path, method: :delete, class: 'btn btn-link'
         - else
           li.nav-item= link_to 'ログイン', login_path, class: 'nav-link'
+          li.nav-item= link_to '新規登録', login_path, class: 'nav-link'
     .container
       - if flash.notice.present?
         .alert.alert-success= flash.notice

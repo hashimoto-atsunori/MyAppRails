@@ -59,7 +59,6 @@ class JobsController < ApplicationController
 
   #CSVインポート
   def import
-
     file = params[:file]
 
     if file.nil? then
@@ -70,10 +69,12 @@ class JobsController < ApplicationController
     end
   end
 
+
+
   private
 
   def job_params
-    params.require(:job).permit(:name, :description, :image)
+    params.require(:job).permit(:name, :description, :image, :start_time)
   end
 
   def set_job

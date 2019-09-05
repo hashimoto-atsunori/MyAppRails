@@ -1,19 +1,8 @@
  document.addEventListener('turbolinks:load', function() {
-   document.querySelectorAll('td').forEach(function(td) {
-     td.addEventListener('mouseover', function(e) {
-      e.currentTarget.style.backgroundColor = '#eff';
-     });
-     
-     td.addEventListener('mouseout',function(e) {
-      e.currentTarget.style.backgroundColor = '';
-     });
-
-   });
 
 const timer = document.getElementById("timer");
 const start = document.getElementById("start");
 const stop = document.getElementById("stop");
-const reset = document.getElementById("reset");
 
 // 経過時間を保存する変数（単位:ミリ秒）
 let elapsedTime;
@@ -26,6 +15,8 @@ let timeToAdd = 0;
 
 // 表示される内容をアップデートする関数
 const updateTimeText = () => {
+  // 1時間 = 1000 ミリ秒 * 60秒 * 60分
+  let h = Math.floor(elapsedTime / (1000 * 60 * 60));
   // 1分 = 1000 ミリ秒 * 60秒
   let m = Math.floor(elapsedTime / (1000 * 60));
   // 1分に満たなかったミリ秒のうち，秒となったもの
@@ -38,7 +29,7 @@ const updateTimeText = () => {
   s = `0${s}`.slice(-2);
   ms = `00${ms}`.slice(-3);
 
-  timer.textContent = `${m}:${s}:${ms}`;
+  timer.value = `${h}:${m}:${s}`;
 };
 
 // 経過時間の管理と計算を行う関数
@@ -57,25 +48,5 @@ start.addEventListener("click", () => {
   start.disabled = true;
   // ストップボタンを有効化
   stop.disabled = false;
-});
-
-stop.addEventListener("click", () => {
-  clearTimeout(timerId);
-  timeToAdd += Date.now() - startTime;
-  // スタートボタンを有効化
-  start.disabled = false;
-  // ストップボタンを無効化
-  stop.disabled = true;
- // elapsedTime = 0;
- // timeToAdd = 0;
-  // 00:00:000 を表示
- // updateTimeText();
-});
-
-reset.addEventListener("click", () => {
-  elapsedTime = 0;
-  timeToAdd = 0;
-  // 00:00:000 を表示
-  updateTimeText();
-});
+    });
  });

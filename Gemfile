@@ -67,7 +67,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'slim-rails'
 gem 'html2slim'
-gem 'bootstrap'
 gem 'webpacker', github: 'rails/webpacker'
 gem 'rails_autolink'
 gem 'devise', git: 'https://github.com/plataformatec/devise.git', branch: 'master'
@@ -76,3 +75,8 @@ gem 'ransack'
 gem 'kaminari'
 gem 'ruby-debug-ide'
 gem 'debase'
+gem 'jquery-rails'
+
+#CSSフレームワーク
+gem 'materialize-sass', '~> 1.0.0'
+gem 'material_icons'

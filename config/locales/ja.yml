@@ -16,7 +16,7 @@ ja:
         image: 画像
         created_at: 登録日時
         updated_at: 更新日時
-        start_time: 開始時刻
+        start_time: タスクの時間
         end_time: 終了時刻
       user:
         name: 名前

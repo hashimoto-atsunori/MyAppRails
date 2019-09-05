@@ -4,10 +4,9 @@ b4b92d66581135d827a764c1e32532123aa46cc6		branch '4-1-stable' of https://github.
 15be320eeda5528ce56b37ba4d338df08455d3b5		branch '5-rc' of https://github.com/plataformatec/devise
 ab790836968cbe8014a98417c6dfc027413b1173		branch 'drv-improve-reset-token' of https://github.com/plataformatec/devise
 99105903c51eba0971afe0d5e59aa0f697bd3f4a		branch 'gh-pages' of https://github.com/plataformatec/devise
-624049aec1c3dcae5b354f670565c8d4d6acce09		branch 'let-blank-confirmation-token' of https://github.com/plataformatec/devise
 c116542c2899a48b3548787ed41025937c499674		branch 'let-unsafe-redirect' of https://github.com/plataformatec/devise
 b68b4002356a1838276632857d2ed6c3f6c5196d		branch 'lm-jruby' of https://github.com/plataformatec/devise
-a79057070c60a274936b8421cd35846e03aa08bd		branch 'master' of https://github.com/plataformatec/devise
+caa1a55d17f5139347be6808954c492b469d3da4		branch 'master' of https://github.com/plataformatec/devise
 b998837592ed56f78a7831b655fae6268c57501e		branch 'test-mongoid' of https://github.com/plataformatec/devise
 f2cd983b4fc62a7abf04d26078d1703239232b40		branch 'v1.0' of https://github.com/plataformatec/devise
 8e0d517cdb07e1c7326923155947706e030fc992		branch 'v1.1' of https://github.com/plataformatec/devise
@@ -154,3 +153,4 @@ e55c9caa056a80a8ad10f4afffb70ffacf503a2d	not-for-merge	tag 'v4.4.1' of https://g
 45016829d6fce6db42c900a5f7565cd670fd9cc9	not-for-merge	tag 'v4.6.0' of https://github.com/plataformatec/devise
 20e299bce0307d79895b05b13530f3c74a0ca0e0	not-for-merge	tag 'v4.6.1' of https://github.com/plataformatec/devise
 2e5b5fcd705b06c518ab0156b96badb91c4cb6ea	not-for-merge	tag 'v4.6.2' of https://github.com/plataformatec/devise
+6bb74c5abff9f75e992560b308b1f8ae926da50e	not-for-merge	tag 'v4.7.0' of https://github.com/plataformatec/devise
