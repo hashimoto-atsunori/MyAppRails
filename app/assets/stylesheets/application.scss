@@ -6,3 +6,7 @@
  */
  @import 'materialize';
  @import 'spaces';
+
+ .sideside {
+  display: flex;/*これを入れるだけで横並び*/
+}

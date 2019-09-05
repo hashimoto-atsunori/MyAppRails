@@ -1,20 +1,16 @@
 h1 Toggl
 
 .mb-3
+
 = form_with model: @job, local: true do |f|
-  .form-inline
-    .form-group
+  .sideside
       = f.label :name, 'Task',class: 'col-sm-2 col-form-label',style: 'width:190px;font-size: 20px;'
-    .form-group.row
       .col-sm-10
        = f.text_field :name, class: 'form-control mr-3', id: 'job_name',placeholder: 'What are you working on?',style: 'width:600px;'
-    .form-group style="width: 100px;"
       span.col-sm-10
       = f.text_field :start_time, class: 'form-control mr-3',value: '0:00:00', id: 'timer' ,style: 'width:90px; border-width:0px; border-style:None; background-color:#ffffff',readonly: ''
-    .form-group
       .col-sm-10
         button[ class = 'btn btn-primary' id = 'start' ]START
-    .form-group
       .col-sm-10
         = f.submit 'STOP', class: 'btn btn-danger', id: 'stop' ,disabled: ''
  
