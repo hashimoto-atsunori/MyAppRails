@@ -1,10 +1,23 @@
 h1 Sign in
 
+br
+
 = form_with scope: :session, local: true do |f|
   .form-group
-    = f.label :email, 'MailAddress'
-    = f.text_field :email, class: 'form-control', id: 'session_email',placeholder: 'E-Mail'
+    = f.label :email, 'MailAddress', style: 'font-size: 17px;'
+    = f.text_field :email, class: 'form-control', id: 'session_email',placeholder: 'E-Mail',value: 'admin@admin.com'
+
+  br
+
   .form-group
-    = f.label :password, 'PassWord'
-    = f.password_field :password, class: 'form-control', id: 'session_password',placeholder: 'Password'
-  = f.submit 'ログインする', class: 'btn btn-primary'
+    = f.label :password, 'PassWord', style: 'font-size: 17px;'
+    = f.password_field :password, class: 'form-control', id: 'session_password',placeholder: 'Password',value:'password'
+
+  br
+
+  = f.submit 'ログイン', class: 'btn btn-primary'
+
+br
+
+= link_to '新規登録' , new_user_path, class:'btn btn-primary mb-3'
+

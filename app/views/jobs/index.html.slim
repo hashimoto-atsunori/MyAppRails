@@ -5,7 +5,7 @@ br
 
 = form_with model: @job, local: true do |f|
   .sideside
-      = f.label :name, 'Task',class: 'col-sm-2 col-form-label',style: 'width:190px;font-size: 20px;'
+      = f.label :name, 'Task',class: 'col-sm-2 col-form-label',style: 'width:190px;font-size: 25px;'
       .col-sm-10
        = f.text_field :name, class: 'form-control mr-3', id: 'job_name',placeholder: 'What are you working on?',style: 'width:600px;'
       span.col-sm-10
@@ -21,25 +21,21 @@ br
 .mb-3
 = search_form_for @q, class: 'mb-5' do |f|
   .form-group.row
-    = f.label :name_cont, '名称', class: 'col-sm-2 col-form-label'
+    = f.label :name_cont, '名称', class: 'col-sm-2 col-form-label',style: 'font-size: 17px;'
     .col-sm-10
       = f.search_field :name_cont, class: 'form-control'
   .form-group.row
-    = f.label :created_at_gteq, '登録日時', class: 'col-sm-2 col-form-label'
+    = f.label :created_at_gteq, '登録日時', class: 'col-sm-2 col-form-label',style: 'font-size: 17px;'
     .col-sm-10
       = f.search_field :created_at_gteq, class: 'form-control'
   .form-group
-    = f.submit class: 'btn btn-outline-primary'
+    = f.submit class: 'btn btn-outline-primary',style: 'float: right;'
 
 br
 br
 br
 
-= link_to '詳細登録' , new_job_path, class:'btn btn-primary mb-3'
-
-.mb-3
-  = paginate @jobs
-  = page_entries_info @jobs
+= link_to '詳細登録' , new_job_path, class:'btn btn-primary mb-3',style: 'float: right;'
 
 .mb-3
 table.table.table-hover
@@ -58,9 +54,16 @@ table.table.table-hover
         td
           = link_to '編集', edit_job_path(job), class: 'btn btn-primary mr-3'
           = link_to '削除', job, method: :delete, data: { confirm: "タスク「#{job.name}」を削除します。よろしいですか？" }, class: 'btn btn-danger'
-= link_to 'エクスポート', jobs_path(format: :csv), class: 'btn btn-primary mb-5'
+
+.mb-3
+  = paginate @jobs
+  = page_entries_info @jobs
+
+br
+
+= link_to 'CSV EXPORT', jobs_path(format: :csv), class: 'btn btn-primary mb-5',style: 'float: right;'
 
 = form_tag import_jobs_path, multipart: true, class: 'mb-5' do
   = file_field_tag :file
-  = submit_tag "インポート", class: 'btn btn-primary'
+  = submit_tag "CSV IMPORT", class: 'btn btn-primary'
 

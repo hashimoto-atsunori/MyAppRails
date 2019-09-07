@@ -1,0 +1,8 @@
+- flash.each do |type, msg|
+  -# 色についてはhttps://materializecss.com/color.htmlを参照
+  - color = 'light-blue lighten-3' if type == 'notice'
+  - color = 'red lighten-1' if type == 'alert'
+
+  = javascript_tag "M.toast({html: '#{msg}',
+                             classes: '#{color}',
+                             displayLength: 2000})"
