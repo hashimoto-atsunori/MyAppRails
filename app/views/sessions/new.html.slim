@@ -1,5 +1,15 @@
 h1 Sign in
 
+.divider
+
+.section
+  h5
+    'テストユーザはこのままログインできます。
+  p
+    'ID: admin@admin.com 
+    br
+    'PassWord: password
+
 br
 
 = form_with scope: :session, local: true do |f|
@@ -15,9 +25,5 @@ br
 
   br
 
-  = f.submit 'ログイン', class: 'btn btn-primary'
-
-br
-
-= link_to '新規登録' , new_user_path, class:'btn btn-primary mb-3'
-
+  = f.submit 'ログイン', class: 'btn btn-primary', style: 'margin-right: 30px;'
+  = link_to '新規登録' , new_user_path, class:'btn btn-primary'

@@ -1,0 +1,21 @@
+.include-image
+  .overlay
+    h1[ style = 'font-size: 30px' ]
+     'LET'S MEASURE THE TIME
+
+    p[ style = 'font-size: 17px' ]
+     'Are! Yo mitsuketana. Sura Sura yomeru yaro. Kore nihongoyanen.
+     br
+     'Mainichi isogashii anata ni kono TODO App tukattekureya!
+     br
+     'Enryo ha irande moshi bagu wo mituketara renraku sitekureyona
+     br
+     br
+     'If you are not registered user, click on the "sign up" button
+     br
+     'If you are a registered user, click on the "sign in" button
+     br
+     '
+     br
+     = link_to 'Sign in', login_path, class: 'nav-link',style: 'margin-right: 35px;'
+     = link_to 'Sign up', new_user_path, class: 'nav-link'

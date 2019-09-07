@@ -8,10 +8,13 @@ class ApplicationController < ActionController::Base
       @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]
     end
 
-    #初期表示の新規登録ボタンだけパスが通る
+    #ログインの新規登録ボタンとトップ画面のパスが通る
     def login_required
       if (controller_path != 'users' && action_name != 'new')
-        redirect_to login_path unless current_user
+        if (controller_path != 'top')
+         redirect_to login_path unless current_user
+        end
       end
     end
+
 end

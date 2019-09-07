@@ -10,3 +10,81 @@
  .sideside {
   display: flex;/*これを入れるだけで横並び*/
 }
+
+/* ----- 背景用の動画ファイル ----- */
+#bg-video{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  background: url('poster.jpg') no-repeat;
+  background-size: cover;
+ }
+ /* ----- 背景の上に表示させたいコンテンツ ----- */
+ .header-title{
+  position: relative; /*必ず必要*/
+  z-index: 2; /*必ず必要*/
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+  margin: auto;
+ }
+
+ .wrap{
+  height: 100vh;
+  background: linear-gradient(-45deg, rgba(4, 114, 124, 0.4), rgba(17, 66, 99, 0.6));
+ }
+/* -- 画像を読み込ませる --*/
+ .main-image {
+  background-image: image-url("/images/main.jpg");
+  height: 800px;
+  background-size: cover;
+}
+
+html, body, .include-image {
+  width: 100%;
+  height: 100%;
+}
+
+.include-image,
+.overlay:before {
+  background: image-url("/images/main.jpg") no-repeat fixed 0 0 / cover;
+  height: 900px;
+}
+
+
+.include-image {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.overlay {
+  max-height: 500px;
+  margin: 0 auto;
+  max-width: 768px;
+  overflow: hidden;
+  padding: 50px;
+  position: relative;
+  color: white;
+  font-family: 'Lato';
+  position: relative;
+  text-align: center;
+  z-index: 0;
+  &:before {
+    content: '';
+    filter: blur(20px);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+}
