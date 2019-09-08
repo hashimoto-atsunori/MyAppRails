@@ -32,25 +32,25 @@ url : https://limitless-eyrie-57958.herokuapp.com/top
 - それぞれの画面のページネーション機能
 
 ## 使用技術
-- 開発環境
-  - Docker for Mac
-- テスト
-  - Rspec
-- 本番環境
-  - Heroku(暫定、ECSに移行を検討中)
-- DB
-  - Postgre
-- CI/CD
-  - CircleCI
-- フロント
- - Materialize
- - Slim
-- 画像
- - Active-Storage
-- ページネーション機能
- - kaminari
-- 検索
- - ransack
+- 開発環境  
+  - Docker for Mac  
+- テスト  
+  - Rspec  
+- 本番環境  
+  - Heroku(暫定、ECSに移行を検討中)  
+- DB  
+  - Postgre    
+- CI/CD  
+  - CircleCI  
+- フロント  
+  - Materialize  
+  - Slim  
+- 画像  
+  - Active-Storage  
+- ページネーション機能  
+  - kaminari  
+- 検索  
+  - ransack  
  
 ## 依存関係
 - Rails: 6.0.0
