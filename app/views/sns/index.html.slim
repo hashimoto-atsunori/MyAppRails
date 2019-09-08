@@ -1,5 +1,12 @@
 h1 Everyone's tasks
-.item-list
+
+.mb-3
+  = paginate @jobs
+  = page_entries_info @jobs
+
+br
+
+.item-list 
  - @jobs.each do |job|
     .row
       .col.s12.m6

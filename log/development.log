@@ -37185,3 +37185,242 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 152ms (Views: 150.7ms | ActiveRecord: 0.0ms | Allocations: 33026)
 
 
+Started POST "/login" for 172.18.0.1 at 2019-09-08 12:17:56 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R4JfnPvAqsz6OeCg/bNM0eHQdxaHuypRh/bx6ZX8mUnzitU1C/RXOaJH0OHFGoeGdIehah/W1/OLnpaH70v5Zg==", "session"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 214ms (ActiveRecord: 0.6ms | Allocations: 1021)
+
+
+Started GET "/" for 172.18.0.1 at 2019-09-08 12:17:56 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 ORDER BY "jobs"."created_at" DESC LIMIT $2 OFFSET $3[0m  [["user_id", 3], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:49
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT "jobs"."id") FROM "jobs" WHERE "jobs"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/jobs/index.html.slim:59
+  Rendered jobs/index.html.slim within layouts/application (Duration: 18.5ms | Allocations: 8148)
+  Rendered layouts/_toast.html.slim (Duration: 0.1ms | Allocations: 23)
+Completed 200 OK in 241ms (Views: 235.2ms | ActiveRecord: 2.0ms | Allocations: 41720)
+
+
+Started GET "/sns" for 172.18.0.1 at 2019-09-08 12:17:59 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SnsController#index as HTML
+  Rendering sns/index.html.slim within layouts/application
+  [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY "jobs"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/sns/index.html.slim:3
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "jobs"[0m
+  ↳ app/views/sns/index.html.slim:19
+  Rendered sns/index.html.slim within layouts/application (Duration: 15.0ms | Allocations: 4347)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 157ms (Views: 153.7ms | ActiveRecord: 2.3ms | Allocations: 37616)
+
+
+Started GET "/admin/users" for 172.18.0.1 at 2019-09-08 12:18:01 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering admin/users/index.html.slim within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.slim:16
+  Rendered admin/users/index.html.slim within layouts/application (Duration: 7.7ms | Allocations: 2196)
+Completed 200 OK in 178ms (Views: 169.2ms | ActiveRecord: 2.0ms | Allocations: 35344)
+
+
+Started GET "/jobs" for 172.18.0.1 at 2019-09-08 12:18:01 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering jobs/index.html.slim within layouts/application
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT DISTINCT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1 ORDER BY "jobs"."created_at" DESC LIMIT $2 OFFSET $3[0m  [["user_id", 3], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/jobs/index.html.slim:49
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(DISTINCT "jobs"."id") FROM "jobs" WHERE "jobs"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/jobs/index.html.slim:59
+  Rendered jobs/index.html.slim within layouts/application (Duration: 23.0ms | Allocations: 8106)
+Completed 200 OK in 191ms (Views: 182.8ms | ActiveRecord: 2.5ms | Allocations: 41547)
+
+
+Started GET "/admin/users" for 172.18.0.1 at 2019-09-08 12:18:03 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering admin/users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.slim:16
+  Rendered admin/users/index.html.slim within layouts/application (Duration: 6.4ms | Allocations: 2185)
+Completed 200 OK in 191ms (Views: 186.3ms | ActiveRecord: 1.3ms | Allocations: 35331)
+
+
+Started GET "/sns" for 172.18.0.1 at 2019-09-08 12:18:08 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SnsController#index as HTML
+  Rendering sns/index.html.slim within layouts/application
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY "jobs"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/sns/index.html.slim:3
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "jobs"[0m
+  ↳ app/views/sns/index.html.slim:19
+  Rendered sns/index.html.slim within layouts/application (Duration: 18.1ms | Allocations: 4341)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 197ms (Views: 194.5ms | ActiveRecord: 1.8ms | Allocations: 37596)
+
+
+Started GET "/sns?page=2" for 172.18.0.1 at 2019-09-08 12:18:13 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SnsController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering sns/index.html.slim within layouts/application
+  [1m[36mJob Load (1.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY "jobs"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 25]]
+  ↳ app/views/sns/index.html.slim:3
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "jobs"[0m
+  ↳ app/views/sns/index.html.slim:19
+  Rendered sns/index.html.slim within layouts/application (Duration: 40.9ms | Allocations: 8685)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 244ms (Views: 239.6ms | ActiveRecord: 2.7ms | Allocations: 41952)
+
+
+Started GET "/sns?page=2" for 172.18.0.1 at 2019-09-08 12:18:43 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SnsController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering sns/index.html.slim within layouts/application
+  [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY "jobs"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 25]]
+  ↳ app/views/sns/index.html.slim:3
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "jobs"[0m
+  ↳ app/views/sns/index.html.slim:19
+  Rendered sns/index.html.slim within layouts/application (Duration: 25.0ms | Allocations: 5009)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 285ms (Views: 280.7ms | ActiveRecord: 2.2ms | Allocations: 38262)
+
+
+Started GET "/sns?page=2" for 172.18.0.1 at 2019-09-08 12:18:51 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SnsController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering sns/index.html.slim within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "jobs"[0m
+  ↳ app/views/sns/index.html.slim:4
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "jobs" ORDER BY "jobs"."created_at" DESC LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 25], ["OFFSET", 25]]
+  ↳ app/views/sns/index.html.slim:5
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY "jobs"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 25]]
+  ↳ app/views/sns/index.html.slim:9
+  Rendered sns/index.html.slim within layouts/application (Duration: 69.2ms | Allocations: 23793)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 267ms (Views: 259.5ms | ActiveRecord: 2.5ms | Allocations: 65989)
+
+
+Started GET "/sns?page=2" for 172.18.0.1 at 2019-09-08 12:19:05 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SnsController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering sns/index.html.slim within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "jobs"[0m
+  ↳ app/views/sns/index.html.slim:4
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "jobs" ORDER BY "jobs"."created_at" DESC LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 25], ["OFFSET", 25]]
+  ↳ app/views/sns/index.html.slim:5
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY "jobs"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 25]]
+  ↳ app/views/sns/index.html.slim:9
+  Rendered sns/index.html.slim within layouts/application (Duration: 83.3ms | Allocations: 27163)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 300ms (Views: 292.6ms | ActiveRecord: 2.0ms | Allocations: 69350)
+
+
+Started GET "/sns?page=3" for 172.18.0.1 at 2019-09-08 12:19:12 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SnsController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering sns/index.html.slim within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "jobs"[0m
+  ↳ app/views/sns/index.html.slim:4
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "jobs" ORDER BY "jobs"."created_at" DESC LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 25], ["OFFSET", 50]]
+  ↳ app/views/sns/index.html.slim:5
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY "jobs"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 50]]
+  ↳ app/views/sns/index.html.slim:9
+  Rendered sns/index.html.slim within layouts/application (Duration: 30.5ms | Allocations: 8548)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 273ms (Views: 268.1ms | ActiveRecord: 3.5ms | Allocations: 41805)
+
+
+Started GET "/sns?page=3" for 172.18.0.1 at 2019-09-08 12:20:11 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SnsController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering sns/index.html.slim within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "jobs"[0m
+  ↳ app/views/sns/index.html.slim:4
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "jobs" ORDER BY "jobs"."created_at" DESC LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 25], ["OFFSET", 50]]
+  ↳ app/views/sns/index.html.slim:5
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY "jobs"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 50]]
+  ↳ app/views/sns/index.html.slim:9
+  Rendered sns/index.html.slim within layouts/application (Duration: 23.0ms | Allocations: 8545)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 2342ms (Views: 2337.8ms | ActiveRecord: 2.8ms | Allocations: 1359520)
+
+
+Started GET "/sns?page=3" for 172.18.0.1 at 2019-09-08 12:20:21 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SnsController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering sns/index.html.slim within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "jobs"[0m
+  ↳ app/views/sns/index.html.slim:4
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "jobs" ORDER BY "jobs"."created_at" DESC LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 25], ["OFFSET", 50]]
+  ↳ app/views/sns/index.html.slim:5
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY "jobs"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 50]]
+  ↳ app/views/sns/index.html.slim:10
+  Rendered sns/index.html.slim within layouts/application (Duration: 105.8ms | Allocations: 27411)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 357ms (Views: 347.3ms | ActiveRecord: 2.7ms | Allocations: 69688)
+
+
+Started GET "/sns?page=3" for 172.18.0.1 at 2019-09-08 12:20:38 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SnsController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering sns/index.html.slim within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "jobs"[0m
+  ↳ app/views/sns/index.html.slim:4
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "jobs" ORDER BY "jobs"."created_at" DESC LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 25], ["OFFSET", 50]]
+  ↳ app/views/sns/index.html.slim:5
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY "jobs"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 50]]
+  ↳ app/views/sns/index.html.slim:10
+  Rendered sns/index.html.slim within layouts/application (Duration: 28.6ms | Allocations: 8548)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 2724ms (Views: 2719.0ms | ActiveRecord: 2.9ms | Allocations: 1359957)
+
+
+Started GET "/sns" for 172.18.0.1 at 2019-09-08 12:20:46 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SnsController#index as HTML
+  Rendering sns/index.html.slim within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "jobs"[0m
+  ↳ app/views/sns/index.html.slim:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "jobs" ORDER BY "jobs"."created_at" DESC LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/sns/index.html.slim:5
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY "jobs"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/sns/index.html.slim:10
+  Rendered sns/index.html.slim within layouts/application (Duration: 34.1ms | Allocations: 9084)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 208ms (Views: 203.8ms | ActiveRecord: 2.5ms | Allocations: 42433)
+
+
