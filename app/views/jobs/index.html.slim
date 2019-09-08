@@ -37,6 +37,12 @@ br
 
 = link_to '詳細登録' , new_job_path, class:'btn btn-primary mb-3'
 
+br
+
+.mb-3
+  = paginate @jobs
+  = page_entries_info @jobs
+
 .mb-3
 table.table.table-hover
   thead.thead-default
