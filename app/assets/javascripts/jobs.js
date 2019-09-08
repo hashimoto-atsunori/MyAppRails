@@ -49,4 +49,9 @@ start.addEventListener("click", () => {
   // ストップボタンを有効化
   stop.disabled = false;
     });
+
+//ダッシュボードの処理を追加
+var elems = document.querySelectorAll('.sidenav');
+var instances = M.Sidenav.init(elems, {});
+
  });

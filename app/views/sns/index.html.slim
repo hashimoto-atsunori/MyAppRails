@@ -1,0 +1,20 @@
+h1 Everyone's tasks
+.item-list
+ - @jobs.each do |job|
+    .row
+      .col.s12.m6
+        .card.blue-grey.darken-1
+          .card-content.white-text
+            span.card-title
+              = job.name
+            p
+            '時間 : 
+            = job.start_time
+            br
+            p
+            '登録日 : 
+            = job.created_at
+
+.mb-3
+  = paginate @jobs
+  = page_entries_info @jobs

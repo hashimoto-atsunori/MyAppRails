@@ -13,6 +13,7 @@ class JobsController < ApplicationController
 
     #初期画面から登録する
     @job = Job.new
+
   end
 
   def show
@@ -32,6 +33,10 @@ class JobsController < ApplicationController
 
   def create
     @job = current_user.jobs.new(job_params)
+
+    if @job.name.blank?
+      @job.name = '名無しのタスク'
+    end
 
     if params[:back].present?
       render :new

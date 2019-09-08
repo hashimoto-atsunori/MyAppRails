@@ -40,6 +40,8 @@
   height: 100vh;
   background: linear-gradient(-45deg, rgba(4, 114, 124, 0.4), rgba(17, 66, 99, 0.6));
  }
+
+
 /* -- 画像を読み込ませる --*/
  .main-image {
   background-image: image-url("/images/main.jpg");
@@ -87,4 +89,20 @@ html, body, .include-image {
     width: 100%;
     z-index: -1;
   }
+}
+
+/* -- ダッシュボード --*/
+header, main, footer {
+  padding-left: 300px;
+}
+
+@media only screen and (max-width : 992px) {
+  header, main, footer {
+    padding-left: 0;
+  }
+}
+
+/* -- 横一列に並べる --*/
+.item-list {
+  width: 100%;
 }
