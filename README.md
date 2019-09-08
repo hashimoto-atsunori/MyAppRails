@@ -1,24 +1,9 @@
-# README
+# Toggl
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+toggl を参考に Ruby on Rails の練習として作りました。
+url : https://limitless-eyrie-57958.herokuapp.com/top
+参考 : https://toggl.com/
 
-Things you may want to cover:
+# 概要
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+タスクの時間を測ってみんなでタスクを共有するアプリ
