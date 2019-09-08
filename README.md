@@ -7,3 +7,9 @@ url : https://limitless-eyrie-57958.herokuapp.com/top
 # 概要
 
 タスクの時間を測ってみんなでタスクを共有するアプリ
+
+# 主な機能
+
+*ユーザ管理機能
+　　○ 
+
