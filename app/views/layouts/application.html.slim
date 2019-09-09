@@ -9,25 +9,26 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
     nav
-      .anav-wrapper
-        .brand-logo 
+      .nav-wrapper
+        .brand-logo.center
+          i.material-icons cloud
           - if current_user
             = link_to 'Toggl', jobs_path, class: 'nav-link'
           - else
             = link_to 'Toggl', top_path, class: 'nav-link'
 
-      ul.right.hide-on-med-and-down
-          - if current_user
-            li.nav-item= link_to 'TaskList', jobs_path, class: 'nav-link'
-            - if current_user.admin?
-              li.nav-item= link_to 'UserList', admin_users_path, class: 'nav-link'
-            li.nav-item= link_to 'SNS', sns_path, class: 'nav-link'
-            li.nav-item= link_to 'NewTask', new_job_path, class: 'nav-link'
-            li.nav-item= link_to 'Sign up', new_user_path, class: 'nav-link'
-            li.nav-item= link_to 'Sign out', logout_path, method: :delete, class: 'nav-link'
-          - else
-            li.nav-item= link_to 'Sign in', login_path, class: 'nav-link'
-            li.nav-item= link_to 'Sign up', new_user_path, class: 'nav-link'
+        ul.right.hide-on-med-and-down
+            - if current_user
+              li.nav-item= link_to 'TaskList', jobs_path, class: 'nav-link'
+              - if current_user.admin?
+                li.nav-item= link_to 'UserList', admin_users_path, class: 'nav-link'
+              li.nav-item= link_to 'SNS', sns_path, class: 'nav-link'
+              li.nav-item= link_to 'NewTask', new_job_path, class: 'nav-link'
+              li.nav-item= link_to 'Sign up', new_user_path, class: 'nav-link'
+              li.nav-item= link_to 'Sign out', logout_path, method: :delete, class: 'nav-link'
+            - else
+              li.nav-item= link_to 'Sign in', login_path, class: 'nav-link'
+              li.nav-item= link_to 'Sign up', new_user_path, class: 'nav-link'
           
 
     
