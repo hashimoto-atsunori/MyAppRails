@@ -56,3 +56,6 @@ url : https://limitless-eyrie-57958.herokuapp.com/top
 - Ruby: 2.6.3
 - Materialize 1.0.0
 - Rspec 3.8
+
+## License
+MIT
