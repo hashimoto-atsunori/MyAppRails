@@ -38,7 +38,7 @@ url : https://limitless-eyrie-57958.herokuapp.com/top
 - 本番環境  
   - Heroku(暫定、ECSに移行を検討中)  
 - DB  
-  - Postgre    
+  - PostgreSQL    
 - CI/CD  
   - CircleCI  
 - フロント  
