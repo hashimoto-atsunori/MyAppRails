@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   get '/top', to: 'top#index'
-  get 'static_pages/home'
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
 
+  resources :static_pages
   resources :sns
 
   resources :users

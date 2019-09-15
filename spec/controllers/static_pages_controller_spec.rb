@@ -4,7 +4,7 @@ RSpec.describe StaticPagesController, type: :controller do
 
   describe "静的ページの表示機能" do
     it "トップページが正しく表示される" do
-      get :home
+      get :index
       expect(response).to have_http_status 302
     end
   end
